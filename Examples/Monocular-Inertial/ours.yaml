@@ -1,0 +1,99 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+Camera.type: "PinHole"
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 314.69931970850485
+Camera.fy: 314.43213716473895
+Camera.cx: 328.66316015575666
+Camera.cy: 239.07548243861322
+
+Camera.k1: -0.07170514051398937
+Camera.k2: 0.03741383201189383
+Camera.p1: 0.00013694255830205767
+Camera.p2: 0.0005190826291676836
+
+# Camera resolution
+Camera.width: 640
+Camera.height: 480
+
+# Camera frames per second 
+Camera.fps: 20.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Transformation from camera to body-frame (imu)
+Tbc: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [0.10722879, 0.07456408, -0.99143441, -0.03616137,
+           0.99414254, -0.02159391, 0.10589765,  -0.00113103,
+           -0.01351279, -0.9969824, -0.07644281, 0.14670003,
+           0, 0, 0, 1]
+
+# IMU noise
+IMU.NoiseGyro: 0.00561814836888 #1.6968e-04 
+IMU.NoiseAcc: 0.021626216782 #2.0e-3
+IMU.GyroWalk: 7.20389504248e-05
+IMU.AccWalk: 0.000403819905541 # 3e-03
+IMU.Frequency: 100
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000 # 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+SLAM             : 0
+
+#--------------------------------------------------------------------------------------------
+# Line Extractor
+# 0->LSD Extractor (default)
+# 1->ED Extractor (Suggested not to be used as long as only Line SLAM is chosen i.e. SLAM->1 or SLAM->2 or SLAM->3)
+#--------------------------------------------------------------------------------------------
+extractor        : 0
+
+#--------------------------------------------------------------------------------------------
+# Line Extractor Parameters
+# You can decrease the lsd_scale parameter in order to decrease computational time e.g. lsd_scale->0.6 or lsd_scale->0.5
+# Also in order to decrease computational time you can set levels to 1
+#--------------------------------------------------------------------------------------------
+nfeatures        : 0    # Number of Line Features (set to 0 if keeping all lines) -> Used for LSD and ED
+lsd_refine       : 0     # -> Used Only for LSD
+lsd_scale        : 0.8  # The scale of the image that will be used to find the lines. Range (0..1.0] -> Used Only for LSD
+levels           : 2     # Levels of the Pyramid (Only 1 and 2 can be selected) -> Used for LSD and ED
+scale            : 2.0   # Scale factor between levels in the scale pyramid -> Used for LSD and ED
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize:2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5 # -1.8
+Viewer.ViewpointF: 500
+
