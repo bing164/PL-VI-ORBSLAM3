@@ -227,6 +227,7 @@ void LocalMapping::Run()
             std::chrono::steady_clock::time_point t7 = std::chrono::steady_clock::now();
 
             mpLoopCloser->InsertKeyFrame(mpCurrentKeyFrame);
+//            mpRelocaler->InsertKeyFrame(mpCurrentKeyFrame);
             std::chrono::steady_clock::time_point t8 = std::chrono::steady_clock::now();
 
             double t_procKF = std::chrono::duration_cast<std::chrono::duration<double,std::milli> >(t1 - t0).count();
@@ -447,6 +448,7 @@ void LocalMapping::Run_Lines()
             std::chrono::steady_clock::time_point t7 = std::chrono::steady_clock::now();
 
             mpLoopCloser->InsertKeyFrame(mpCurrentKeyFrame);
+//            mpRelocaler->InsertKeyFrame(mpCurrentKeyFrame);
             std::chrono::steady_clock::time_point t8 = std::chrono::steady_clock::now();
 
             double t_procKF = std::chrono::duration_cast<std::chrono::duration<double,std::milli> >(t1 - t0).count();
@@ -1523,6 +1525,7 @@ void LocalMapping::Release()
     for(list<KeyFrame*>::iterator lit = mlNewKeyFrames.begin(), lend=mlNewKeyFrames.end(); lit!=lend; lit++)
         delete *lit;
     mlNewKeyFrames.clear();
+//    mpRelocaler->ClearKF();
 
     cout << "Local Mapping RELEASE" << endl;
 }
@@ -2018,6 +2021,7 @@ void LocalMapping::ResetIfRequested()
 
             cout << "LM: Reseting Atlas in Local Mapping..." << endl;
             mlNewKeyFrames.clear();
+//            mpRelocaler->ClearKF();
             mlpRecentAddedMapPoints.clear();
             mbResetRequested=false;
             mbResetRequestedActiveMap = false;
@@ -2037,6 +2041,7 @@ void LocalMapping::ResetIfRequested()
             executed_reset = true;
             cout << "LM: Reseting current map in Local Mapping..." << endl;
             mlNewKeyFrames.clear();
+//            mpRelocaler->ClearKF();
             mlpRecentAddedMapPoints.clear();
 
             // Inertial parameters
@@ -2065,6 +2070,7 @@ void LocalMapping::ResetIfRequestedWithLines()
 
             cout << "LM: Reseting Atlas in Local Mapping..." << endl;
             mlNewKeyFrames.clear();
+//            mpRelocaler->ClearKF();
             mlpRecentAddedMapPoints.clear();
             mlpRecentAddedMapLines.clear();
             mbResetRequested=false;
@@ -2085,6 +2091,7 @@ void LocalMapping::ResetIfRequestedWithLines()
             executed_reset = true;
             cout << "LM: Reseting current map in Local Mapping..." << endl;
             mlNewKeyFrames.clear();
+//            mpRelocaler->ClearKF();
             mlpRecentAddedMapPoints.clear();
             mlpRecentAddedMapLines.clear();
 

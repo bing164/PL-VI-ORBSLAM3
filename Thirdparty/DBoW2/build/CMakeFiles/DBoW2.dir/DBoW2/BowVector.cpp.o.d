@@ -1,5 +1,5 @@
 CMakeFiles/DBoW2.dir/DBoW2/BowVector.cpp.o: \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/BowVector.cpp \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/BowVector.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -165,7 +165,7 @@ CMakeFiles/DBoW2.dir/DBoW2/BowVector.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/BowVector.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/BowVector.h \
  /usr/include/c++/9/map /usr/include/c++/9/bits/stl_tree.h \
  /usr/include/c++/9/ext/aligned_buffer.h \
  /usr/include/c++/9/bits/stl_map.h /usr/include/c++/9/tuple \

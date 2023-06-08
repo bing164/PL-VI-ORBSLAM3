@@ -1,5 +1,5 @@
 CMakeFiles/DBoW2.dir/DBoW2/FORB.cpp.o: \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/FORB.cpp \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/FORB.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/vector \
  /usr/include/c++/9/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
@@ -148,7 +148,7 @@ CMakeFiles/DBoW2.dir/DBoW2/FORB.cpp.o: \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/bits/istream.tcc \
  /usr/include/c++/9/bits/sstream.tcc \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint-gcc.h \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/FORB.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/FORB.h \
  /usr/include/opencv4/opencv2/core/core.hpp \
  /usr/include/opencv4/opencv2/core.hpp \
  /usr/include/opencv4/opencv2/core/cvdef.h \
@@ -231,4 +231,4 @@ CMakeFiles/DBoW2.dir/DBoW2/FORB.cpp.o: \
  /usr/include/opencv4/opencv2/core/optim.hpp \
  /usr/include/opencv4/opencv2/core/ovx.hpp \
  /usr/include/opencv4/opencv2/core/cvdef.h \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/FClass.h
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/FClass.h

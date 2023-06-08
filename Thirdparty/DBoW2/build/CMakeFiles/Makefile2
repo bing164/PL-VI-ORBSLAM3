@@ -54,10 +54,10 @@ RM = /home/bing/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2
+CMAKE_SOURCE_DIR = /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/build
+CMAKE_BINARY_DIR = /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/DBoW2.dir/clean
 CMakeFiles/DBoW2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DBoW2.dir/build.make CMakeFiles/DBoW2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DBoW2.dir/build.make CMakeFiles/DBoW2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target DBoW2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target DBoW2"
 .PHONY : CMakeFiles/DBoW2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DBoW2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DBoW2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/build/CMakeFiles 0
 .PHONY : CMakeFiles/DBoW2.dir/rule
 
 # Convenience name for target.

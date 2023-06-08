@@ -213,6 +213,9 @@ System::System(const string &strVocFile_ORB, const string &strVocFile_Line, cons
     mptLoopClosing = new thread(&ORB_SLAM3::LoopClosing::Run_Lines, mpLoopCloser);
     }
 
+    mpRelocalizer = new Relocalization(strSettingsFile);
+    mptRelocalization = new thread(&ORB_SLAM3::Relocalization::Run, mpRelocalizer);
+
     //Initialize the Viewer thread and launch
     if(bUseViewer)
     {
@@ -226,6 +229,7 @@ System::System(const string &strVocFile_ORB, const string &strVocFile_Line, cons
     //Set pointers between threads
     mpTracker->SetLocalMapper(mpLocalMapper);
     mpTracker->SetLoopClosing(mpLoopCloser);
+    mpTracker->SetRelocalizion(mpRelocalizer);
 
     mpLocalMapper->SetTracker(mpTracker);
     mpLocalMapper->SetLoopCloser(mpLoopCloser);

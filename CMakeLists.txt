@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(ORB_SLAM3-line)
+project(ORB_SLAM3-Relocalization)
 
 IF(NOT CMAKE_BUILD_TYPE)
   SET(CMAKE_BUILD_TYPE Release)
@@ -55,6 +55,7 @@ include_directories(
 ${PROJECT_SOURCE_DIR}
 ${PROJECT_SOURCE_DIR}/include
 ${PROJECT_SOURCE_DIR}/include/CameraModels
+${PROJECT_SOURCE_DIR}/include/Relocalization
 ${PROJECT_SOURCE_DIR}/Thirdparty/line_descriptor/include/
 ${EIGEN3_INCLUDE_DIR}
 ${Pangolin_INCLUDE_DIRS}
@@ -94,8 +95,11 @@ src/LineExtractor.cc
 src/LineIterator.cpp
 src/LineMatcher.cpp
 src/MapLine.cc
+src/TwoViewReconstruction.cc
 src/LSD/lsd.cpp
 src/LSD/precomp.hpp
+src/Relocalization/Relocalization.cpp
+src/Relocalization/R_Frame.cpp
 include/gridStructure.h
 include/LineExtractor.h
 include/LineIterator.h
@@ -129,7 +133,11 @@ include/CameraModels/KannalaBrandt8.h
 include/OptimizableTypes.h
 include/MLPnPsolver.h
 include/TwoViewReconstruction.h
-src/TwoViewReconstruction.cc)
+include/Relocalization/Relocalization.h
+include/Relocalization/R_Frame.h        )
+
+#set( DBoW2_INCLUDE_DIRS "/usr/local/include" )
+#set( DBoW2_LIBS "/usr/local/lib/libDBoW2.so" )
 
 add_subdirectory(Thirdparty/g2o)
 
@@ -138,6 +146,7 @@ ${OpenCV_LIBS}
 ${EIGEN3_LIBS}
 ${Pangolin_LIBRARIES}
 ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+#${DBoW2_LIBS}
 ${PROJECT_SOURCE_DIR}/Thirdparty/line_descriptor/lib/liblinedesc.so
 ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
 -lboost_serialization

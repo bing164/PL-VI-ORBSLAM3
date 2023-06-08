@@ -39,7 +39,7 @@
 #include "MapDrawer.h"
 #include "System.h"
 #include "ImuTypes.h"
-
+#include "Relocalization.h"
 #include "GeometricCamera.h"
 
 #include <mutex>
@@ -54,7 +54,7 @@ class Atlas;
 class LocalMapping;
 class LoopClosing;
 class System;
-
+class Relocalization;
 class Tracking
 {
 
@@ -101,6 +101,7 @@ public:
 
     void SetLocalMapper(LocalMapping* pLocalMapper);
     void SetLoopClosing(LoopClosing* pLoopClosing);
+    void SetRelocalizion(Relocalization* pRelocalization);
     void SetViewer(Viewer* pViewer);
     void SetStepByStep(bool bSet);
 
@@ -291,6 +292,7 @@ protected:
     //Other Thread Pointers
     LocalMapping* mpLocalMapper;
     LoopClosing* mpLoopClosing;
+    class Relocalization* mpRelocalization;
 
     //ORB
     ORBextractor* mpORBextractorLeft, *mpORBextractorRight;

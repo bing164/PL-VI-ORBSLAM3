@@ -92,7 +92,7 @@ stereo_line_euroc3_EXTERNAL_OBJECTS =
 
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Examples/Stereo-Line/stereo_line_euroc3: CMakeFiles/stereo_line_euroc3.dir/Examples/Stereo-Line/stereo_line_euroc.cc.o
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Examples/Stereo-Line/stereo_line_euroc3: CMakeFiles/stereo_line_euroc3.dir/build.make
-/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Examples/Stereo-Line/stereo_line_euroc3: /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-line.so
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Examples/Stereo-Line/stereo_line_euroc3: /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Examples/Stereo-Line/stereo_line_euroc3: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.2.0
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Examples/Stereo-Line/stereo_line_euroc3: /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.2.0
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Examples/Stereo-Line/stereo_line_euroc3: /usr/lib/x86_64-linux-gnu/libopencv_bgsegm.so.4.2.0

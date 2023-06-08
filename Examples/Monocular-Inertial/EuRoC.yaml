@@ -97,3 +97,10 @@ Viewer.ViewpointY: -0.7
 Viewer.ViewpointZ: -3.5 # -1.8
 Viewer.ViewpointF: 500
 
+
+#---------------------------------------------------------------------------------------
+# Relocalization Parameters
+#---------------------------------------------------------------------------------------
+Relocalization.Path: "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Vocabulary/ORBvoc.txt"
+Relocalization.data: "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/data/"
+

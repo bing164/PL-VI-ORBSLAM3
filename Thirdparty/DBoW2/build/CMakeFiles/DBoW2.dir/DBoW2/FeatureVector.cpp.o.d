@@ -1,8 +1,8 @@
 CMakeFiles/DBoW2.dir/DBoW2/FeatureVector.cpp.o: \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/FeatureVector.cpp \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/FeatureVector.cpp \
  /usr/include/stdc-predef.h \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/FeatureVector.h \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/BowVector.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/FeatureVector.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/BowVector.h \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \

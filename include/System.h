@@ -40,6 +40,7 @@
 #include "ORBVocabulary.h"
 #include "Viewer.h"
 #include "ImuTypes.h"
+#include "Relocalization.h"
 
 
 namespace ORB_SLAM3
@@ -78,6 +79,7 @@ class Atlas;
 class Tracking;
 class LocalMapping;
 class LoopClosing;
+class Relocalization;
 
 class System
 {
@@ -214,6 +216,9 @@ private:
     // a pose graph optimization and full bundle adjustment (in a new thread) afterwards.
     LoopClosing* mpLoopCloser;
 
+    // Relocalization
+    Relocalization* mpRelocalizer;
+
     // The viewer draws the map and the current camera pose. It uses Pangolin.
     Viewer* mpViewer;
 
@@ -225,6 +230,7 @@ private:
     std::thread* mptLocalMapping;
     std::thread* mptLoopClosing;
     std::thread* mptViewer;
+    std::thread* mptRelocalization;
 
     // Reset flag
     std::mutex mMutexReset;

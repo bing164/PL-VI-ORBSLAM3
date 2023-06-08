@@ -101,7 +101,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/bing/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake"
   "/home/bing/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.26/Modules/Platform/Linux.cmake"
   "/home/bing/.local/lib/python3.8/site-packages/cmake/data/share/cmake-3.26/Modules/Platform/UnixPaths.cmake"
-  "/home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/CMakeLists.txt"
+  "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/CMakeLists.txt"
   "CMakeFiles/3.26.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.26.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.26.3/CMakeSystem.cmake"

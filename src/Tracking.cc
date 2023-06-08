@@ -1167,6 +1167,10 @@ void Tracking::SetLoopClosing(LoopClosing *pLoopClosing)
     mpLoopClosing=pLoopClosing;
 }
 
+void Tracking::SetRelocalizion(class Relocalization *pRelocalization) {
+    mpRelocalization = pRelocalization;
+}
+
 void Tracking::SetViewer(Viewer *pViewer)
 {
     mpViewer=pViewer;
@@ -3299,6 +3303,8 @@ void Tracking::CreateInitialMapMonocular()
 
     mpLocalMapper->InsertKeyFrame(pKFini);
     mpLocalMapper->InsertKeyFrame(pKFcur);
+    mpRelocalization->InsertKeyFrame(pKFini);
+    mpRelocalization->InsertKeyFrame(pKFcur);
     mpLocalMapper->mFirstTs=pKFcur->mTimeStamp;
 
     mCurrentFrame.SetPose(pKFcur->GetPose());
@@ -4833,6 +4839,9 @@ void Tracking::CreateNewKeyFrame()
 
     mpLocalMapper->SetNotStop(false);
 
+    // 插入关键帧进入重定位建图线程
+    mpRelocalization->InsertKeyFrame(pKF);
+
     mnLastKeyFrameId = mCurrentFrame.mnId;
     mpLastKeyFrame = pKF;
     //cout  << "end creating new KF" << endl;
@@ -5029,6 +5038,8 @@ void Tracking::CreateNewKeyFrameWithLines()
     mpLocalMapper->InsertKeyFrame(pKF);
 
     mpLocalMapper->SetNotStop(false);
+
+    mpRelocalization->InsertKeyFrame(pKF);
 
     mnLastKeyFrameId = mCurrentFrame.mnId;
     mpLastKeyFrame = pKF;
@@ -5915,6 +5926,9 @@ void Tracking::Reset(bool bLocMap)
         Verbose::PrintMess("done", Verbose::VERBOSITY_NORMAL);
     }
 
+    // Reset Relocalization
+//    mpRelocalization->RequestReset();
+    mpRelocalization->ClearKF();
 
     // Reset Loop Closing
     Verbose::PrintMess("Reseting Loop Closing...", Verbose::VERBOSITY_NORMAL);
@@ -5980,6 +5994,9 @@ void Tracking::ResetActiveMap(bool bLocMap)
         Verbose::PrintMess("done", Verbose::VERBOSITY_NORMAL);
     }
 
+    // Reset Relocalization
+//    mpRelocalization->RequestResetActiveMap(pMap);
+    mpRelocalization->ClearKF();
     // Reset Loop Closing
     Verbose::PrintMess("Reseting Loop Closing...", Verbose::VERBOSITY_NORMAL);
     mpLoopClosing->RequestResetActiveMap(pMap);

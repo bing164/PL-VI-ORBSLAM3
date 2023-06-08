@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/lib/libDBoW2.pdb"
-  "/home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/lib/libDBoW2.so"
+  "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/lib/libDBoW2.pdb"
+  "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/lib/libDBoW2.so"
   "CMakeFiles/DBoW2.dir/DBoW2/BowVector.cpp.o"
   "CMakeFiles/DBoW2.dir/DBoW2/BowVector.cpp.o.d"
   "CMakeFiles/DBoW2.dir/DBoW2/FORB.cpp.o"

@@ -1,5 +1,5 @@
 CMakeFiles/DBoW2.dir/DUtils/Timestamp.cpp.o: \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DUtils/Timestamp.cpp \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DUtils/Timestamp.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/cstdio \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -164,5 +164,5 @@ CMakeFiles/DBoW2.dir/DUtils/Timestamp.cpp.o: \
  /usr/include/c++/9/array /usr/include/c++/9/bits/uses_allocator.h \
  /usr/include/c++/9/bits/invoke.h /usr/include/c++/9/bits/quoted_string.h \
  /usr/include/x86_64-linux-gnu/sys/time.h \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DUtils/Timestamp.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DUtils/Timestamp.h \
  /usr/include/c++/9/iostream

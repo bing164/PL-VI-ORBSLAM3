@@ -1,5 +1,5 @@
 CMakeFiles/DBoW2.dir/DBoW2/ScoringObject.cpp.o: \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/ScoringObject.cpp \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/ScoringObject.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/cfloat \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -10,7 +10,7 @@ CMakeFiles/DBoW2.dir/DBoW2/ScoringObject.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h \
  /usr/include/c++/9/cassert /usr/include/assert.h \
  /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_algobase.h \
  /usr/include/c++/9/bits/functexcept.h \
@@ -235,8 +235,8 @@ CMakeFiles/DBoW2.dir/DBoW2/ScoringObject.cpp.o: \
  /usr/include/opencv4/opencv2/core/optim.hpp \
  /usr/include/opencv4/opencv2/core/ovx.hpp \
  /usr/include/opencv4/opencv2/core/cvdef.h \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/FeatureVector.h \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/BowVector.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/FeatureVector.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/BowVector.h \
  /usr/include/c++/9/iostream /usr/include/c++/9/map \
  /usr/include/c++/9/bits/stl_tree.h /usr/include/c++/9/bits/stl_map.h \
  /usr/include/c++/9/bits/stl_multimap.h \
@@ -536,5 +536,5 @@ CMakeFiles/DBoW2.dir/DBoW2/ScoringObject.cpp.o: \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/less_equal.hpp \
  /usr/include/boost/mpl/greater_equal.hpp \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/greater_equal.hpp \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/ScoringObject.h \
- /home/bing/yd/ORB2-LINE/ORB-LINE-SLAM/Thirdparty/DBoW2/DBoW2/../DUtils/Random.h
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/ScoringObject.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/DBoW2/DBoW2/../DUtils/Random.h
