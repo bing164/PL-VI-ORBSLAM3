@@ -9,6 +9,7 @@
 #include "Eigen/Geometry"
 #include "ORBextractor.h"
 #include "ORBVocabulary.h"
+#include "Relocalization.h"
 
 namespace ORB_SLAM3 {
 
@@ -17,7 +18,8 @@ class R_Frame {
 public:
     R_Frame() {}
 
-    R_Frame(const cv::Mat& colorImgs, const cv::Mat& depthImgs, const Eigen::Isometry3d pose, int i, const std::string &time, cv::Mat K);
+    R_Frame(const cv::Mat& colorImgs, const cv::Mat& depthImgs, const Eigen::Isometry3d pose,
+            int i, const std::string &time, cv::Mat K, ORBextractor* orb, ORBVocabulary* voc);
 
 public:
     ORBextractor* orb_exetractor;
@@ -26,8 +28,8 @@ public:
     DBoW2::BowVector m_BowVector;
     DBoW2::FeatureVector m_FeatVec;
 
-    cv::Mat m_colorImgs;
-    cv::Mat m_depthImgs;
+//    cv::Mat m_colorImgs;
+//    cv::Mat m_depthImgs;
     Eigen::Isometry3d m_pose;   // Twc
 
     int FrameId = 0; // 对应文件夹中的文件名，从1开始
@@ -35,6 +37,10 @@ public:
 
     cv::Mat m_K;
 
+private:
+    ORBVocabulary* m_vocab;
+//    KeyFrameDatabase* m_KeyFrameDatabase;
+    std::vector<list<R_Frame*>>   m_InvertedFile_R;
 };
 }
 

@@ -1372,7 +1372,10 @@ CMakeFiles/stereo_line_euroc3.dir/Examples/Stereo-Line/stereo_line_euroc.cc.o: /
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h
 
 
 /usr/include/boost/algorithm/string/erase.hpp:

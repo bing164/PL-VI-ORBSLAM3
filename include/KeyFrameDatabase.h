@@ -28,6 +28,7 @@
 #include "Frame.h"
 #include "ORBVocabulary.h"
 #include "Map.h"
+//#include "R_Frame.h"
 
 #include <boost/serialization/base_object.hpp>
 #include <boost/serialization/vector.hpp>
@@ -42,8 +43,7 @@ namespace ORB_SLAM3
 class KeyFrame;
 class Frame;
 class Map;
-
-
+//class R_Frame;
 class KeyFrameDatabase
 {
     friend class boost::serialization::access;
@@ -81,6 +81,7 @@ public:
    void PostLoad(map<long unsigned int, KeyFrame*> mpKFid);
    void SetORBVocabulary(ORBVocabulary* pORBVoc);
 
+
 protected:
 
   // Associated vocabulary
@@ -90,6 +91,7 @@ protected:
   // Inverted file
   std::vector<list<KeyFrame*> > mvInvertedFile;
   std::vector<list<KeyFrame*> > mvInvertedFile_l;
+//  std::vector<list<R_Frame*>>   mvInvertedFile_R;
 
   // For save relation without pointer, this is necessary for save/load function
   std::vector<list<long unsigned int> > mvBackupInvertedFileId;

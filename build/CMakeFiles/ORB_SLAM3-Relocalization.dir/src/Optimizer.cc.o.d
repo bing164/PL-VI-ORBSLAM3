@@ -1082,7 +1082,10 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Optimizer.cc.o: \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Initializer.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/LineMatcher.h \
  /usr/include/boost/algorithm/string.hpp \
@@ -1395,7 +1398,6 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Optimizer.cc.o: \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/base_multi_edge.hpp \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/base_unary_edge.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Frame.h \
- /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/OptimizableTypes.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/types/sim3.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/CameraModels/GeometricCamera.h \

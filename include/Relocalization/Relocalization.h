@@ -10,15 +10,22 @@
 #include "R_Frame.h"
 #include "Tracking.h"
 #include "ORBVocabulary.h"
+#include "KeyFrameDatabase.h"
+#include "Converter.h"
 
 namespace ORB_SLAM3 {
 
 class R_Frame;
-class KeyFrame;
+//class KeyFrame;
 class Tracking;
+class KeyFrameDatabase;
+class Converter;
 class Relocalization {
 public:
-    Relocalization(const std::string &strSettingPath);
+    Relocalization(const std::string &strSettingPath );
+
+    std::vector<R_Frame> LoadImages(const std::string &strimagePath, ORBVocabulary* vocab, ORBextractor* orbextractor);
+
 
 //    Relocalization(const std::string &vocpath, const std::string &imgpath);
 
@@ -30,14 +37,20 @@ public:
 
     void Run();
 
+    void add(R_Frame *R_F);
+
+    vector<R_Frame*> DetectRelocalization(KeyFrame* pKF);
+
 
     void RequestReset();
     void RequestResetActiveMap(Map* pMap);
     void ResetIfRequested();
 
-public:
+private:
 //    DBoW2::Database m_db;
     ORBVocabulary* m_vocab;
+//    KeyFrameDatabase* m_KeyFrameDatabase;
+    std::vector<list<R_Frame*>> m_InvertedFile_R;
 
 protected:
     std::mutex mMutexRelocalQueue;
@@ -51,6 +64,15 @@ protected:
     bool mbResetRequestedActiveMap;
 
     bool CheckNewKeyFrames();
+
+    std::mutex mMutexNewKFs;
+//
+//    KeyFrame* m_CurrentKeyFrame;
+
+public:
+    ORBextractor* orb_exetractor;
+
+    std::vector<R_Frame> m_Vec_BowF;
 
 };
 }

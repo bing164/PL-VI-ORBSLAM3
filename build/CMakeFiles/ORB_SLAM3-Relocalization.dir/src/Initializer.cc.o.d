@@ -1085,7 +1085,10 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Initializer.cc.o: \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Initializer.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/LineMatcher.h \
  /usr/include/boost/algorithm/string.hpp \

@@ -102,5 +102,5 @@ Viewer.ViewpointF: 500
 # Relocalization Parameters
 #---------------------------------------------------------------------------------------
 Relocalization.Path: "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Vocabulary/ORBvoc.txt"
-Relocalization.data: "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/data/"
+Relocalization.data: "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/data2/"
 

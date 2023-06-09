@@ -1264,5 +1264,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ImuTypes.h

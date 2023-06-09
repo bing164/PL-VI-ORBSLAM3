@@ -1067,6 +1067,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/Relocalization.cpp.o:
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Viewer.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/FrameDrawer.h \
@@ -1264,4 +1265,6 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/Relocalization.cpp.o:
  /usr/include/boost/algorithm/string/detail/formatter.hpp \
  /usr/include/boost/algorithm/string/erase.hpp \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Initializer.h \
- /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/LineMatcher.h
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/LineMatcher.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h

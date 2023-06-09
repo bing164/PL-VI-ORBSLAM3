@@ -1068,7 +1068,7 @@ namespace ORB_SLAM3
     int ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPoint>& _keypoints,
                                   OutputArray _descriptors, std::vector<int> &vLappingArea)
     {
-        //cout << "[ORBextractor]: Max Features: " << nfeatures << endl;
+//        cout << "[ORBextractor]: Max Features: " << nfeatures << endl;
         if(_image.empty())
             return -1;
 
@@ -1145,7 +1145,7 @@ namespace ORB_SLAM3
                 i++;
             }
         }
-        //cout << "[ORBextractor]: extracted " << _keypoints.size() << " KeyPoints" << endl;
+//        cout << "[ORBextractor]: extracted " << _keypoints.size() << " KeyPoints" << endl;
         return monoIndex;
     }
 

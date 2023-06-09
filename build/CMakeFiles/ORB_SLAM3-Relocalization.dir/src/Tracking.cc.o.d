@@ -1269,12 +1269,14 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Tracking.cc.o: \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /usr/include/opencv4/opencv2/imgproc/types_c.h \
  /usr/include/opencv4/opencv2/core/core_c.h \
  /usr/include/opencv4/opencv2/core/types_c.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBmatcher.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/FrameDrawer.h \
- /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Initializer.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/G2oTypes.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/base_vertex.h \

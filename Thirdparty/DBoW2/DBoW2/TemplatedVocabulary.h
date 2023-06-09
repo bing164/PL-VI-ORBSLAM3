@@ -1189,7 +1189,7 @@ void TemplatedVocabulary<TDescriptor,F>::transform(
       }
     }
   } // if m_weighting == ...
-  
+
   if(must) v.normalize(norm);
 }
 

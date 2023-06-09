@@ -1269,7 +1269,10 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/FrameDrawer.cc.o: \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /usr/include/opencv4/opencv2/highgui/highgui.hpp \
  /usr/include/opencv4/opencv2/imgproc/types_c.h \
  /usr/include/opencv4/opencv2/core/core_c.h \

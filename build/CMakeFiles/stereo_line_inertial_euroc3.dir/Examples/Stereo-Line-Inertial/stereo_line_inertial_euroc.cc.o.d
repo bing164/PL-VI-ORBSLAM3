@@ -1263,7 +1263,10 @@ CMakeFiles/stereo_line_inertial_euroc3.dir/Examples/Stereo-Line-Inertial/stereo_
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ImuTypes.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Optimizer.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.h \

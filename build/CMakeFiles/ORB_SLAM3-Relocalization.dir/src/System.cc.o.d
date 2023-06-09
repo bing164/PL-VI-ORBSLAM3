@@ -1269,7 +1269,9 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/System.cc.o: \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /usr/include/openssl/md5.h \
  /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \

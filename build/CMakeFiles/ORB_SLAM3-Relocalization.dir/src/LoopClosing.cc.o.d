@@ -1082,7 +1082,10 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/LoopClosing.cc.o: \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Initializer.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/LineMatcher.h \
  /usr/include/boost/algorithm/string.hpp \
@@ -1271,7 +1274,6 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/LoopClosing.cc.o: \
  /usr/include/opencv4/opencv2/core/core_c.h \
  /usr/include/opencv4/opencv2/core/types_c.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Sim3Solver.h \
- /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Optimizer.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix_ccs.h \
