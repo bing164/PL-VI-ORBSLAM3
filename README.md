@@ -5,4 +5,5 @@ This code has been adapted from the open-source code available at https://github
 
 # Log
 2023.0608 添加重定位线程，完成关键帧获取、删除、完成整体框架
+
 2023.0609 仿照ORB-SLAM3中的词带，编写词带匹配部分，完成简单的词带检测，后续还需要改进。
