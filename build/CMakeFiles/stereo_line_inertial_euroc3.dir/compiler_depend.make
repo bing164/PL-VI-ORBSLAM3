@@ -1369,26 +1369,26 @@ CMakeFiles/stereo_line_inertial_euroc3.dir/Examples/Stereo-Line-Inertial/stereo_
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/LineMatcher.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrame.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_ORBmatcher.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBmatcher.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ImuTypes.h \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Optimizer.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Optimizer.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/block_solver.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/solver.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/hyper_graph.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/batch_stats.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix_ccs.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/config.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/matrix_operations.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/matrix_structure.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.hpp \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/block_solver.h \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/solver.h \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/hyper_graph.h \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/batch_stats.h \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/linear_solver.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix_diagonal.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/openmp_mutex.h \
@@ -1401,6 +1401,8 @@ CMakeFiles/stereo_line_inertial_euroc3.dir/Examples/Stereo-Line-Inertial/stereo_
   /usr/include/x86_64-linux-gnu/sys/time.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/misc.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/macros.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm_levenberg.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm_with_hessian.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm.h \
@@ -1488,8 +1490,18 @@ CMakeFiles/stereo_line_inertial_euroc3.dir/Examples/Stereo-Line-Inertial/stereo_
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/batch_stats.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/timeutil.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/eigen_types.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ImuTypes.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Optimizer.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/block_solver.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm_levenberg.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm_gauss_newton.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_eigen.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h
 
 
@@ -1583,10 +1595,6 @@ CMakeFiles/stereo_line_inertial_euroc3.dir/Examples/Stereo-Line-Inertial/stereo_
 
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/linear_solver.h:
 
-/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/batch_stats.h:
-
-/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/solver.h:
-
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/matrix_structure.h:
 
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/matrix_operations.h:
@@ -1594,6 +1602,10 @@ CMakeFiles/stereo_line_inertial_euroc3.dir/Examples/Stereo-Line-Inertial/stereo_
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix_ccs.h:
 
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/batch_stats.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/solver.h:
 
 /usr/include/boost/algorithm/string/erase.hpp:
 
@@ -1850,6 +1862,8 @@ CMakeFiles/stereo_line_inertial_euroc3.dir/Examples/Stereo-Line-Inertial/stereo_
 /usr/include/boost/core/use_default.hpp:
 
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/CameraModels/Pinhole.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_ORBmatcher.h:
 
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Atlas.h:
 
@@ -2276,6 +2290,8 @@ CMakeFiles/stereo_line_inertial_euroc3.dir/Examples/Stereo-Line-Inertial/stereo_
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/FrameDrawer.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vlintrin.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBmatcher.h:
 
 /usr/include/boost/mpl/aux_/value_wknd.hpp:
 
@@ -3276,6 +3292,8 @@ CMakeFiles/stereo_line_inertial_euroc3.dir/Examples/Stereo-Line-Inertial/stereo_
 /usr/include/boost/preprocessor/detail/is_binary.hpp:
 
 /usr/include/opencv4/opencv2/superres.hpp:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Optimizer.h:
 
 /usr/include/boost/preprocessor/repetition/for.hpp:
 

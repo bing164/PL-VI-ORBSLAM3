@@ -9,6 +9,19 @@ namespace ORB_SLAM3 {
 //    list<R_Frame> list_BowF;
 //    std::vector<R_Frame> vec_BowF;
     cv::Mat K = (cv::Mat_<double>(3,3) << 518.0, 0, 325.5, 0, 519.0, 253.5, 0, 0, 1);
+    typedef pair<double, int> PDI;
+    struct cmp2 {
+        bool operator()(const PDI& a, const PDI& b) {
+            return a.first > b.first;
+        }
+    };
+
+//    inline cv::Point2d pixel2cam(const cv::Point& p, const cv::Mat &K) {
+//        return cv::Point2d(
+//                (p.x - K.at<double>(0,2)) / K.at<double>(0,0),
+//                (p.y - K.at<double>(1,2)) / K.at<double>(1,1)
+//        );
+//    }
 
     std::vector<R_Frame> Relocalization::LoadImages(const std::string &strimagePath, ORBVocabulary* vocab, ORBextractor* orbextractor) {
         std::string pose = strimagePath + "pose.txt";
@@ -41,7 +54,7 @@ namespace ORB_SLAM3 {
 //            std::shared_ptr<R_Frame> currentFrame =
 //                    std::make_shared<R_Frame>(colorImgs, depthImgs, T, i+1, time, K, orbextractor, vocab);
 //            R_Frame* currentFrame = new R_Frame(colorImgs, depthImgs, T, i+1, time, K, orbextractor,vocab);
-            vec_Bow.emplace_back(currentFrame);
+            vec_Bow.push_back(currentFrame);
             add(&currentFrame);
 //            list_BowF.emplace_back(currentFrame);
 //            DBoW2::BowVector Bow_vector;
@@ -94,28 +107,50 @@ Relocalization::Relocalization(const std::string &strSettingPath) {
 void Relocalization::Run() {
     while (1) {
         if (CheckNewKeyFrames()) {
-            KeyFrame* m_CurKF;
+            KeyFrame* CurKF;
             cout << "Relocalization KFs = " << mlRelocalKeyFrames.size() << endl;
             {
                 unique_lock<mutex> lock(mMutexNewKFs);
-                m_CurKF = mlRelocalKeyFrames.front();
+                CurKF = mlRelocalKeyFrames.front();
                 mlRelocalKeyFrames.pop_front();
             }
 
-            double max_score = 0.0;
+            priority_queue<PDI, vector<PDI>, cmp2> que;
+            R_ORBmatcher matcher(0.9, true);
             int k = 0;
             for (auto f : m_Vec_BowF) {
-                double score = m_vocab->score(m_CurKF->mBowVec, f.m_BowVector);
-                cout << "score = " << score << endl;
-                if (score > max_score) {
-                    max_score = score;
-                    k = f.FrameId;
+                double score = m_vocab->score(CurKF->mBowVec, f.m_BowVector);
+                cout << "score = " << score << " id = " << f.FrameId << endl;
+
+                que.push(PDI(score, k));
+                if (que.size() > 3) {
+                    que.pop();
                 }
-
+                k++;
             }
-            cv::Mat pose = Converter::toCvMat(m_Vec_BowF[k].m_pose.matrix());
 
-            m_CurKF->SetPose(pose);
+            int bestId = -1;
+            int best_matches = 0;
+            while (!que.empty()) {
+                cout << "que111 = " << que.top().first << " 222 = " << que.top().second << endl;
+                int nmatches = matcher.SearchForRelocalizationByOpenCV(m_Vec_BowF[que.top().second], CurKF);
+//                cout << "nmatches = " << nmatches << endl;
+                if (nmatches > best_matches) {
+                    best_matches = nmatches;
+                    bestId = que.top().second;
+                }
+                que.pop();
+            }
+            cout << "bestId = " << bestId << " best matches = " << best_matches << endl;
+            R_Frame Bow_F = m_Vec_BowF[bestId];
+            R_Frame::GetMapPoints(CurKF, &Bow_F);
+
+//            R_Optimizer::R_PoseOptimization(&Bow_F, CurKF);
+
+
+//            cv::Mat pose = Converter::toCvMat(m_Vec_BowF[k].m_pose.matrix());
+//
+//            m_CurKF->SetPose(pose);
 //            m_CurKF->ComputeBoW();
 //            std::vector<R_Frame*> RFs = DetectRelocalization(m_CurKF);
 //            cout << "RFs = " << m_CurKF->mBowVec << endl;
@@ -127,7 +162,7 @@ void Relocalization::Run() {
     }
 }
 
-void Relocalization::add(R_Frame *R_F) {
+void Relocalization::add(R_Frame* R_F) {
         cout << "111" << endl;
         if (R_F->m_BowVector.empty()) {
             cout << "empty " << endl;

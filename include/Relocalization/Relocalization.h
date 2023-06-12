@@ -7,11 +7,13 @@
 
 #include "KeyFrame.h"
 //#include "DBoW2/DBoW2.h"
+#include "R_ORBmatcher.h"
 #include "R_Frame.h"
 #include "Tracking.h"
 #include "ORBVocabulary.h"
 #include "KeyFrameDatabase.h"
 #include "Converter.h"
+#include "R_Optimizer.h"
 
 namespace ORB_SLAM3 {
 
@@ -20,6 +22,7 @@ class R_Frame;
 class Tracking;
 class KeyFrameDatabase;
 class Converter;
+
 class Relocalization {
 public:
     Relocalization(const std::string &strSettingPath );
@@ -37,7 +40,7 @@ public:
 
     void Run();
 
-    void add(R_Frame *R_F);
+    void add(R_Frame* R_F);
 
     vector<R_Frame*> DetectRelocalization(KeyFrame* pKF);
 
@@ -73,6 +76,10 @@ public:
     ORBextractor* orb_exetractor;
 
     std::vector<R_Frame> m_Vec_BowF;
+
+//    std::vector<cv::Point2f> m_PrevMatched;
+//
+//    std::vector<int> m_IniMatches;
 
 };
 }

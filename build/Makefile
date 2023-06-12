@@ -925,6 +925,54 @@ src/Relocalization/R_Frame.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ORB_SLAM3-Relocalization.dir/build.make CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Frame.cpp.s
 .PHONY : src/Relocalization/R_Frame.cpp.s
 
+src/Relocalization/R_ORBmatcher.o: src/Relocalization/R_ORBmatcher.cpp.o
+.PHONY : src/Relocalization/R_ORBmatcher.o
+
+# target to build an object file
+src/Relocalization/R_ORBmatcher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ORB_SLAM3-Relocalization.dir/build.make CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o
+.PHONY : src/Relocalization/R_ORBmatcher.cpp.o
+
+src/Relocalization/R_ORBmatcher.i: src/Relocalization/R_ORBmatcher.cpp.i
+.PHONY : src/Relocalization/R_ORBmatcher.i
+
+# target to preprocess a source file
+src/Relocalization/R_ORBmatcher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ORB_SLAM3-Relocalization.dir/build.make CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.i
+.PHONY : src/Relocalization/R_ORBmatcher.cpp.i
+
+src/Relocalization/R_ORBmatcher.s: src/Relocalization/R_ORBmatcher.cpp.s
+.PHONY : src/Relocalization/R_ORBmatcher.s
+
+# target to generate assembly for a file
+src/Relocalization/R_ORBmatcher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ORB_SLAM3-Relocalization.dir/build.make CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.s
+.PHONY : src/Relocalization/R_ORBmatcher.cpp.s
+
+src/Relocalization/R_Optimizer.o: src/Relocalization/R_Optimizer.cpp.o
+.PHONY : src/Relocalization/R_Optimizer.o
+
+# target to build an object file
+src/Relocalization/R_Optimizer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ORB_SLAM3-Relocalization.dir/build.make CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o
+.PHONY : src/Relocalization/R_Optimizer.cpp.o
+
+src/Relocalization/R_Optimizer.i: src/Relocalization/R_Optimizer.cpp.i
+.PHONY : src/Relocalization/R_Optimizer.i
+
+# target to preprocess a source file
+src/Relocalization/R_Optimizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ORB_SLAM3-Relocalization.dir/build.make CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.i
+.PHONY : src/Relocalization/R_Optimizer.cpp.i
+
+src/Relocalization/R_Optimizer.s: src/Relocalization/R_Optimizer.cpp.s
+.PHONY : src/Relocalization/R_Optimizer.s
+
+# target to generate assembly for a file
+src/Relocalization/R_Optimizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ORB_SLAM3-Relocalization.dir/build.make CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.s
+.PHONY : src/Relocalization/R_Optimizer.cpp.s
+
 src/Relocalization/Relocalization.o: src/Relocalization/Relocalization.cpp.o
 .PHONY : src/Relocalization/Relocalization.o
 
@@ -1199,6 +1247,12 @@ help:
 	@echo "... src/Relocalization/R_Frame.o"
 	@echo "... src/Relocalization/R_Frame.i"
 	@echo "... src/Relocalization/R_Frame.s"
+	@echo "... src/Relocalization/R_ORBmatcher.o"
+	@echo "... src/Relocalization/R_ORBmatcher.i"
+	@echo "... src/Relocalization/R_ORBmatcher.s"
+	@echo "... src/Relocalization/R_Optimizer.o"
+	@echo "... src/Relocalization/R_Optimizer.i"
+	@echo "... src/Relocalization/R_Optimizer.s"
 	@echo "... src/Relocalization/Relocalization.o"
 	@echo "... src/Relocalization/Relocalization.i"
 	@echo "... src/Relocalization/Relocalization.s"

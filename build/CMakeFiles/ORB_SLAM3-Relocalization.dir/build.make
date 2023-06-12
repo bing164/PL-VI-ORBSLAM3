@@ -559,6 +559,34 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Frame.cpp.s: cmake_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Frame.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_Frame.cpp -o CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Frame.cpp.s
 
+CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o: CMakeFiles/ORB_SLAM3-Relocalization.dir/flags.make
+CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o: /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_ORBmatcher.cpp
+CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o: CMakeFiles/ORB_SLAM3-Relocalization.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o -MF CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o.d -o CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o -c /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_ORBmatcher.cpp
+
+CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_ORBmatcher.cpp > CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.i
+
+CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_ORBmatcher.cpp -o CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.s
+
+CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o: CMakeFiles/ORB_SLAM3-Relocalization.dir/flags.make
+CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o: /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_Optimizer.cpp
+CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o: CMakeFiles/ORB_SLAM3-Relocalization.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o -MF CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o.d -o CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o -c /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_Optimizer.cpp
+
+CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_Optimizer.cpp > CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.i
+
+CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_Optimizer.cpp -o CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.s
+
 # Object files for target ORB_SLAM3-Relocalization
 ORB_SLAM3__Relocalization_OBJECTS = \
 "CMakeFiles/ORB_SLAM3-Relocalization.dir/src/System.cc.o" \
@@ -595,7 +623,9 @@ ORB_SLAM3__Relocalization_OBJECTS = \
 "CMakeFiles/ORB_SLAM3-Relocalization.dir/src/TwoViewReconstruction.cc.o" \
 "CMakeFiles/ORB_SLAM3-Relocalization.dir/src/LSD/lsd.cpp.o" \
 "CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/Relocalization.cpp.o" \
-"CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Frame.cpp.o"
+"CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Frame.cpp.o" \
+"CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o" \
+"CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o"
 
 # External object files for target ORB_SLAM3-Relocalization
 ORB_SLAM3__Relocalization_EXTERNAL_OBJECTS =
@@ -635,6 +665,8 @@ ORB_SLAM3__Relocalization_EXTERNAL_OBJECTS =
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: CMakeFiles/ORB_SLAM3-Relocalization.dir/src/LSD/lsd.cpp.o
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/Relocalization.cpp.o
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Frame.cpp.o
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: CMakeFiles/ORB_SLAM3-Relocalization.dir/build.make
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.2.0
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.2.0
@@ -722,7 +754,7 @@ ORB_SLAM3__Relocalization_EXTERNAL_OBJECTS =
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: /usr/lib/x86_64-linux-gnu/libzstd.so
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: /usr/lib/x86_64-linux-gnu/liblz4.so
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so: CMakeFiles/ORB_SLAM3-Relocalization.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking CXX shared library /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Linking CXX shared library /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/lib/libORB_SLAM3-Relocalization.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ORB_SLAM3-Relocalization.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

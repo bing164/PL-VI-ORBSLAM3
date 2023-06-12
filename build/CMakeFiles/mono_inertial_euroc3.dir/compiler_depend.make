@@ -1370,15 +1370,235 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/LineMatcher.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrame.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_ORBmatcher.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Frame.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBextractor.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/Relocalization.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBmatcher.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Tracking.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Optimizer.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/block_solver.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/solver.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/hyper_graph.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/batch_stats.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix_ccs.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/config.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/matrix_operations.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/matrix_structure.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.hpp \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/linear_solver.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix_diagonal.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/openmp_mutex.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/block_solver.hpp \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_optimizer.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/macros.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimizable_graph.h \
+  /usr/include/eigen3/Eigen/LU \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/timeutil.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/misc.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/macros.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm_levenberg.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm_with_hessian.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/property.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/string_tools.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm_gauss_newton.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_eigen.h \
+  /usr/include/eigen3/Eigen/Sparse \
+  /usr/include/eigen3/Eigen/SparseCore \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /usr/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /usr/include/eigen3/Eigen/OrderingMethods \
+  /usr/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /usr/include/eigen3/Eigen/src/Core/util/NonMPL2.h \
+  /usr/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /usr/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /usr/include/eigen3/Eigen/SparseCholesky \
+  /usr/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /usr/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /usr/include/eigen3/Eigen/src/Core/util/NonMPL2.h \
+  /usr/include/eigen3/Eigen/SparseLU \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /usr/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /usr/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /usr/include/eigen3/Eigen/SparseQR \
+  /usr/include/eigen3/Eigen/src/SparseQR/SparseQR.h \
+  /usr/include/eigen3/Eigen/IterativeLinearSolvers \
+  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /usr/include/eigen3/Eigen/SparseCholesky \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/linear_solver.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/batch_stats.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/timeutil.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/eigen_types.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ImuTypes.h
 
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/eigen_types.h:
+
+/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h:
+
+/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
+
+/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h:
+
+/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h:
+
+/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h:
+
+/usr/include/eigen3/Eigen/IterativeLinearSolvers:
+
+/usr/include/eigen3/Eigen/src/SparseQR/SparseQR.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h:
+
+/usr/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h:
+
+/usr/include/eigen3/Eigen/src/Core/util/NonMPL2.h:
+
+/usr/include/eigen3/Eigen/OrderingMethods:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:
+
+/usr/include/eigen3/Eigen/SparseQR:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseView.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseBlock.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseRef.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseMap.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/string_tools.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/property.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm_with_hessian.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm_levenberg.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/misc.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_optimizer.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix_diagonal.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/linear_solver.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/matrix_structure.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/matrix_operations.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix_ccs.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/batch_stats.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/solver.h:
 
 /usr/include/boost/algorithm/string/erase.hpp:
 
@@ -1393,6 +1613,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/boost/mpl/logical.hpp:
 
 /usr/include/boost/algorithm/string/detail/sequence.hpp:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h:
 
 /usr/include/boost/algorithm/string/detail/util.hpp:
 
@@ -1413,6 +1635,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/boost/bind/mem_fn.hpp:
 
 /usr/include/boost/mem_fn.hpp:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_eigen.h:
 
 /usr/include/boost/function/function_fwd.hpp:
 
@@ -1472,7 +1696,11 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/boost/algorithm/string/case_conv.hpp:
 
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/block_solver.h:
+
 /usr/include/boost/algorithm/string/predicate_facade.hpp:
+
+/usr/include/eigen3/Eigen/SparseLU:
 
 /usr/include/boost/algorithm/string/detail/classification.hpp:
 
@@ -1491,6 +1719,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/boost/type_traits/make_void.hpp:
 
 /usr/include/boost/type_traits/has_plus.hpp:
+
+/usr/include/eigen3/Eigen/Sparse:
 
 /usr/include/boost/range/detail/safe_bool.hpp:
 
@@ -1626,6 +1856,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/CameraModels/Pinhole.h:
 
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_ORBmatcher.h:
+
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Atlas.h:
 
 /usr/include/boost/serialization/array.hpp:
@@ -1659,6 +1891,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/base_unary_edge.hpp:
 
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/base_unary_edge.h:
+
+/usr/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h:
 
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/base_binary_edge.hpp:
 
@@ -1731,6 +1965,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/boost/smart_ptr/detail/shared_count.hpp:
 
 /usr/include/boost/move/detail/workaround.hpp:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h:
 
 /usr/include/boost/serialization/is_bitwise_serializable.hpp:
 
@@ -1842,6 +2078,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h:
+
 /usr/include/boost/algorithm/string/sequence_traits.hpp:
 
 /usr/include/boost/mpl/void_fwd.hpp:
@@ -1855,6 +2093,10 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/boost/preprocessor/tuple/elem.hpp:
 
 /usr/include/boost/mpl/aux_/config/eti.hpp:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm_gauss_newton.h:
 
 /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
 
@@ -1988,7 +2230,11 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/boost/operators.hpp:
 
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
 /usr/local/include/pangolin/gl/gl.h:
+
+/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h:
 
 /usr/include/boost/config/helper_macros.hpp:
 
@@ -1997,6 +2243,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/boost/config/detail/posix_features.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h:
 
 /usr/include/boost/config/platform/linux.hpp:
 
@@ -2036,6 +2284,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/boost/mpl/lambda_fwd.hpp:
 
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h:
+
 /usr/include/boost/type_traits/add_volatile.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vnniintrin.h:
@@ -2055,6 +2305,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/FrameDrawer.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vlintrin.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBmatcher.h:
 
 /usr/include/boost/mpl/aux_/value_wknd.hpp:
 
@@ -2180,6 +2432,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
 
+/usr/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h:
+
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
 
 /usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
@@ -2200,6 +2454,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/string.h:
 
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512ifmaintrin.h:
 
 /usr/include/boost/serialization/singleton.hpp:
@@ -2211,6 +2467,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/opencv4/opencv2/flann/kdtree_index.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseProduct.h:
 
 /usr/include/boost/preprocessor/logical/bool.hpp:
 
@@ -2362,6 +2620,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/c++/9/exception:
 
+/usr/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h:
+
 /usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp:
 
 /usr/include/boost/mpl/aux_/adl_barrier.hpp:
@@ -2414,6 +2674,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/c++/9/complex:
 
+/usr/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h:
+
 /usr/include/boost/concept_check.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
@@ -2432,6 +2694,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h:
+
 /usr/include/boost/config/user.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/NoAlias.h:
@@ -2447,6 +2711,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/c++/9/cmath:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:
 
 /usr/include/boost/algorithm/string/detail/find_format_all.hpp:
 
@@ -2504,6 +2770,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
 
+/usr/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h:
+
 /usr/include/boost/mpl/aux_/na_fwd.hpp:
 
 /usr/include/c++/9/ext/numeric_traits.h:
@@ -2547,6 +2815,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/boost/cstdint.hpp:
+
+/usr/include/eigen3/Eigen/SparseCore:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -2668,6 +2938,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/boost/preprocessor/list/fold_left.hpp:
 
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/block_solver.hpp:
+
 /usr/include/boost/type_traits/enable_if.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
@@ -2679,6 +2951,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/c++/9/iosfwd:
 
 /usr/include/c++/9/bits/stl_bvector.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseVector.h:
 
 /usr/include/boost/config/detail/select_stdlib_config.hpp:
 
@@ -2695,6 +2969,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h:
 
 /usr/include/eigen3/Eigen/Eigenvalues:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/sparse_block_matrix.hpp:
 
 /usr/include/boost/mpl/aux_/config/msvc.hpp:
 
@@ -2876,6 +3152,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/c++/9/ext/aligned_buffer.h:
 
+/usr/include/eigen3/Eigen/src/SparseCore/SparseRedux.h:
+
 /usr/include/boost/preprocessor/list/reverse.hpp:
 
 /usr/include/c++/9/istream:
@@ -2938,6 +3216,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/opencv4/opencv2/core/version.hpp:
 
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h:
+
 /usr/include/c++/9/ctime:
 
 /usr/include/opencv4/opencv2/videoio.hpp:
@@ -2954,9 +3234,13 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/opencv4/opencv2/superres.hpp:
 
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Optimizer.h:
+
 /usr/include/boost/preprocessor/repetition/for.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/waitpkgintrin.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseDot.h:
 
 /usr/include/boost/function.hpp:
 
@@ -2976,7 +3260,11 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
+/usr/include/eigen3/Eigen/src/OrderingMethods/Amd.h:
+
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h:
 
 /usr/include/c++/9/bits/functional_hash.h:
 
@@ -3049,6 +3337,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/opencv4/opencv2/videostab/log.hpp:
 
 /usr/local/include/pangolin/utils/picojson.h:
+
+/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h:
 
 /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:
 
@@ -3144,6 +3434,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h:
 
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/optimization_algorithm.h:
+
 /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/Reverse.h:
@@ -3179,6 +3471,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/boost/concept/detail/concept_def.hpp:
 
 /usr/include/boost/serialization/type_info_implementation.hpp:
+
+/usr/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h:
 
 /usr/include/boost/serialization/base_object.hpp:
 
@@ -3406,6 +3700,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/eigen3/Eigen/src/Core/util/Memory.h:
 
+/usr/include/eigen3/Eigen/SparseCholesky:
+
 /usr/include/eigen3/Eigen/src/Core/MathFunctions.h:
 
 /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h:
@@ -3518,6 +3814,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/eigen3/Eigen/src/Core/BandMatrix.h:
 
+/usr/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h:
+
 /usr/include/boost/serialization/collection_traits.hpp:
 
 /usr/include/boost/function/detail/prologue.hpp:
@@ -3582,6 +3880,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h:
 
+/usr/include/eigen3/Eigen/src/SparseCore/AmbiVector.h:
+
 /usr/include/eigen3/Eigen/src/Core/Replicate.h:
 
 /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
@@ -3613,6 +3913,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vpopcntdqintrin.h:
 
 /usr/include/eigen3/Eigen/src/misc/Kernel.h:
+
+/usr/include/eigen3/Eigen/src/OrderingMethods/Ordering.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h:
 
@@ -3776,6 +4078,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
 
+/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h:
+
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBVocabulary.h:
 
 /usr/include/opencv4/opencv2/flann/any.h:
@@ -3808,6 +4112,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 
 /usr/include/opencv4/opencv2/dnn/dnn.hpp:
 
+/usr/include/eigen3/Eigen/src/SparseCore/SparseAssign.h:
+
 /usr/include/opencv4/opencv2/core/async.hpp:
 
 /usr/include/boost/mpl/aux_/lambda_support.hpp:
@@ -3823,6 +4129,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/local/include/pangolin/image/typed_image.h:
 
 /usr/include/opencv4/opencv2/flann/saving.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h:
 
 /usr/include/opencv4/opencv2/flann/result_set.h:
 
@@ -3857,6 +4165,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/local/include/pangolin/utils/simple_math.h:
 
 /usr/local/include/pangolin/image/image.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h:
 
 /usr/include/opencv4/opencv2/flann/random.h:
 
@@ -3963,6 +4273,8 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
 /usr/include/opencv4/opencv2/videostab/optical_flow.hpp:
 
 /usr/include/opencv4/opencv2/videostab/motion_core.hpp:
+
+/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/stuff/timeutil.h:
 
 /usr/include/opencv4/opencv2/videostab/motion_stabilizing.hpp:
 

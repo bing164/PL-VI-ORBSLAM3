@@ -104,12 +104,12 @@ Thirdparty/g2o/clean: Thirdparty/g2o/CMakeFiles/g2o.dir/clean
 CMakeFiles/ORB_SLAM3-Relocalization.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ORB_SLAM3-Relocalization.dir/build.make CMakeFiles/ORB_SLAM3-Relocalization.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ORB_SLAM3-Relocalization.dir/build.make CMakeFiles/ORB_SLAM3-Relocalization.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36 "Built target ORB_SLAM3-Relocalization"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38 "Built target ORB_SLAM3-Relocalization"
 .PHONY : CMakeFiles/ORB_SLAM3-Relocalization.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ORB_SLAM3-Relocalization.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 38
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ORB_SLAM3-Relocalization.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 0
 .PHONY : CMakeFiles/ORB_SLAM3-Relocalization.dir/rule
@@ -130,12 +130,12 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/clean:
 CMakeFiles/mono_inertial_euroc3.dir/all: CMakeFiles/ORB_SLAM3-Relocalization.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mono_inertial_euroc3.dir/build.make CMakeFiles/mono_inertial_euroc3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mono_inertial_euroc3.dir/build.make CMakeFiles/mono_inertial_euroc3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=68,69 "Built target mono_inertial_euroc3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=70,71 "Built target mono_inertial_euroc3"
 .PHONY : CMakeFiles/mono_inertial_euroc3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mono_inertial_euroc3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 40
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mono_inertial_euroc3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 0
 .PHONY : CMakeFiles/mono_inertial_euroc3.dir/rule
@@ -156,12 +156,12 @@ CMakeFiles/mono_inertial_euroc3.dir/clean:
 CMakeFiles/stereo_line_inertial_euroc3.dir/all: CMakeFiles/ORB_SLAM3-Relocalization.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stereo_line_inertial_euroc3.dir/build.make CMakeFiles/stereo_line_inertial_euroc3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stereo_line_inertial_euroc3.dir/build.make CMakeFiles/stereo_line_inertial_euroc3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=72,73 "Built target stereo_line_inertial_euroc3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=74,75 "Built target stereo_line_inertial_euroc3"
 .PHONY : CMakeFiles/stereo_line_inertial_euroc3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/stereo_line_inertial_euroc3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 40
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/stereo_line_inertial_euroc3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 0
 .PHONY : CMakeFiles/stereo_line_inertial_euroc3.dir/rule
@@ -182,12 +182,12 @@ CMakeFiles/stereo_line_inertial_euroc3.dir/clean:
 CMakeFiles/stereo_line_euroc3.dir/all: CMakeFiles/ORB_SLAM3-Relocalization.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stereo_line_euroc3.dir/build.make CMakeFiles/stereo_line_euroc3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stereo_line_euroc3.dir/build.make CMakeFiles/stereo_line_euroc3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=70,71 "Built target stereo_line_euroc3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=72,73 "Built target stereo_line_euroc3"
 .PHONY : CMakeFiles/stereo_line_euroc3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/stereo_line_euroc3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 40
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/stereo_line_euroc3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles 0
 .PHONY : CMakeFiles/stereo_line_euroc3.dir/rule
@@ -208,7 +208,7 @@ CMakeFiles/stereo_line_euroc3.dir/clean:
 Thirdparty/g2o/CMakeFiles/g2o.dir/all:
 	$(MAKE) $(MAKESILENT) -f Thirdparty/g2o/CMakeFiles/g2o.dir/build.make Thirdparty/g2o/CMakeFiles/g2o.dir/depend
 	$(MAKE) $(MAKESILENT) -f Thirdparty/g2o/CMakeFiles/g2o.dir/build.make Thirdparty/g2o/CMakeFiles/g2o.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67 "Built target g2o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/build/CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69 "Built target g2o"
 .PHONY : Thirdparty/g2o/CMakeFiles/g2o.dir/all
 
 # Build rule for subdir invocation for target.

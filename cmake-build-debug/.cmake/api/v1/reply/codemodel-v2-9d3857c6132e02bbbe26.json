@@ -1,0 +1,129 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4
+					]
+				},
+				{
+					"build" : "Thirdparty/g2o",
+					"jsonFile" : "directory-Thirdparty.g2o-Debug-96235f76f9ee371af9b8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Thirdparty/g2o",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ORB_SLAM3-Relocalization",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "g2o",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ORB_SLAM3-Relocalization::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ORB_SLAM3-Relocalization-Debug-4e749e21749924a1ebe8.json",
+					"name" : "ORB_SLAM3-Relocalization",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "g2o::@f8c4e7b936044c71b29a",
+					"jsonFile" : "target-g2o-Debug-e5b74cfd8147f7ebd1d7.json",
+					"name" : "g2o",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mono_inertial_euroc3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mono_inertial_euroc3-Debug-0347a24acdf4800431fc.json",
+					"name" : "mono_inertial_euroc3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "stereo_line_euroc3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-stereo_line_euroc3-Debug-c1b44a2d6c62625de4d9.json",
+					"name" : "stereo_line_euroc3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "stereo_line_inertial_euroc3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-stereo_line_inertial_euroc3-Debug-00ea8de2f97cd73e117a.json",
+					"name" : "stereo_line_inertial_euroc3",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/cmake-build-debug",
+		"source" : "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

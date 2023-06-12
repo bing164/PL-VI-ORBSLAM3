@@ -100,6 +100,8 @@ src/LSD/lsd.cpp
 src/LSD/precomp.hpp
 src/Relocalization/Relocalization.cpp
 src/Relocalization/R_Frame.cpp
+src/Relocalization/R_ORBmatcher.cpp
+src/Relocalization/R_Optimizer.cpp
 include/gridStructure.h
 include/LineExtractor.h
 include/LineIterator.h
@@ -134,7 +136,9 @@ include/OptimizableTypes.h
 include/MLPnPsolver.h
 include/TwoViewReconstruction.h
 include/Relocalization/Relocalization.h
-include/Relocalization/R_Frame.h        )
+include/Relocalization/R_Frame.h
+include/Relocalization/R_ORBmatcher.h
+include/Relocalization/R_Optimizer.h        )
 
 #set( DBoW2_INCLUDE_DIRS "/usr/local/include" )
 #set( DBoW2_LIBS "/usr/local/lib/libDBoW2.so" )
