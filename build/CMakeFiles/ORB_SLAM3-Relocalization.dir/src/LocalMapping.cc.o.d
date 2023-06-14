@@ -1203,6 +1203,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/LocalMapping.cc.o: \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/core/robust_kernel.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Initializer.h \
  /usr/include/boost/algorithm/string.hpp \
  /usr/include/boost/algorithm/string/std_containers_traits.hpp \

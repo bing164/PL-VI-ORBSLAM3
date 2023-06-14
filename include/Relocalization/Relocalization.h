@@ -14,6 +14,7 @@
 #include "KeyFrameDatabase.h"
 #include "Converter.h"
 #include "R_Optimizer.h"
+#include "MapLine.h"
 
 namespace ORB_SLAM3 {
 
@@ -22,7 +23,7 @@ class R_Frame;
 class Tracking;
 class KeyFrameDatabase;
 class Converter;
-
+class MapLine;
 class Relocalization {
 public:
     Relocalization(const std::string &strSettingPath );
@@ -42,6 +43,8 @@ public:
 
     void add(R_Frame* R_F);
 
+    void UpdatePose(Map* Cur_Map);
+
     vector<R_Frame*> DetectRelocalization(KeyFrame* pKF);
 
 
@@ -54,6 +57,10 @@ private:
     ORBVocabulary* m_vocab;
 //    KeyFrameDatabase* m_KeyFrameDatabase;
     std::vector<list<R_Frame*>> m_InvertedFile_R;
+
+    cv::Mat m_R_Tcr;   // 重定位中词带帧到当前关键帧的位姿变换
+    cv::Mat m_R_T21;   // 当前SLAM的世界坐标系到先验地图的世界坐标系的变换
+    cv::Mat m_R_T12;   // 先验地图的世界坐标系到当前SLAM的世界坐标系的变换
 
 protected:
     std::mutex mMutexRelocalQueue;
@@ -68,9 +75,12 @@ protected:
 
     bool CheckNewKeyFrames();
 
-    std::mutex mMutexNewKFs;
+    std::mutex mMutexNewKFs;   // 读取从Tracking线程中来的关键帧
+    std::mutex mMutexRKFS;     // 检测到重定位后进行关键帧的位姿恢复
 //
 //    KeyFrame* m_CurrentKeyFrame;
+
+    std::list<KeyFrame*> lKFs;
 
 public:
     ORBextractor* orb_exetractor;

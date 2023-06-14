@@ -1389,6 +1389,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Tracking.cc.o: \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/core/robust_kernel.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
  /usr/include/opencv4/opencv2/imgproc/types_c.h \
  /usr/include/opencv4/opencv2/core/core_c.h \
  /usr/include/opencv4/opencv2/core/types_c.h \

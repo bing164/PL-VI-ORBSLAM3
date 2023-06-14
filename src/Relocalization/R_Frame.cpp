@@ -13,6 +13,25 @@ inline cv::Point2d pixel2cam(const cv::Point& p, const cv::Mat &K) {
     );
 }
 
+//R_Frame::R_Frame(const R_Frame &r_frame) : orb_exetractor(r_frame.orb_exetractor), m_keypoints(r_frame.m_keypoints),
+//m_des(r_frame.m_des), m_orbmatches(r_frame.m_orbmatches), m_pts2d(r_frame.m_pts2d), m_pts3d(r_frame.m_pts3d),
+//m_BowVector(r_frame.m_BowVector), m_FeatVec(r_frame.m_FeatVec), m_colorImgs(r_frame.m_colorImgs), m_depthImgs(r_frame.m_depthImgs),
+//m_pose(r_frame.m_pose), FrameId(r_frame.FrameId), m_time(r_frame.m_time), m_K(r_frame.m_K), m_vocab(r_frame.m_vocab),
+//m_InvertedFile_R(r_frame.m_InvertedFile_R), m_Tcr(r_frame.m_Tcr)
+//{
+//    cout << "copy !!!" << endl;
+//}
+
+R_Frame::R_Frame(const R_Frame &r_frame) : orb_exetractor(r_frame.orb_exetractor), m_keypoints(r_frame.m_keypoints),
+m_des(r_frame.m_des), m_orbmatches(r_frame.m_orbmatches), m_pts2d(r_frame.m_pts2d), m_pts3d(r_frame.m_pts3d),
+m_depthImgs(r_frame.m_depthImgs), m_K(r_frame.m_K), m_Tcr(r_frame.m_Tcr), m_pose(r_frame.m_pose)
+//m_BowVector(r_frame.m_BowVector), m_FeatVec(r_frame.m_FeatVec), m_colorImgs(r_frame.m_colorImgs),
+//m_pose(r_frame.m_pose), FrameId(r_frame.FrameId), m_time(r_frame.m_time), m_K(r_frame.m_K)
+{
+    cout << "copy !!!" << endl;
+}
+
+
 R_Frame::R_Frame(const cv::Mat &colorImgs, const cv::Mat &depthImgs, const Eigen::Isometry3d pose,
                  int i, const std::string &time, cv::Mat K, ORBextractor* orb, ORBVocabulary* voc)
 :
@@ -51,6 +70,14 @@ void R_Frame::GetMapPoints(KeyFrame *Cur_F, R_Frame* Bow_F) {
 
     }
     cout << "p2 = " << Bow_F->m_pts2d.size() << " p3 = " << Bow_F->m_pts3d.size() << endl;
+}
+
+void R_Frame::SetTcr(cv::Mat T) {
+    m_Tcr = T.clone();
+}
+
+cv::Mat R_Frame::GetTcr() {
+    return m_Tcr.clone();
 }
 
 

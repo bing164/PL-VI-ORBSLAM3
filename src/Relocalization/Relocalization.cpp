@@ -5,23 +5,13 @@
 #include "Relocalization.h"
 
 namespace ORB_SLAM3 {
-//    std::vector<std::shared_ptr<R_Frame>> Vec_BOWFrame;
-//    list<R_Frame> list_BowF;
-//    std::vector<R_Frame> vec_BowF;
     cv::Mat K = (cv::Mat_<double>(3,3) << 518.0, 0, 325.5, 0, 519.0, 253.5, 0, 0, 1);
     typedef pair<double, int> PDI;
-    struct cmp2 {
+    struct cmp {
         bool operator()(const PDI& a, const PDI& b) {
             return a.first > b.first;
         }
     };
-
-//    inline cv::Point2d pixel2cam(const cv::Point& p, const cv::Mat &K) {
-//        return cv::Point2d(
-//                (p.x - K.at<double>(0,2)) / K.at<double>(0,0),
-//                (p.y - K.at<double>(1,2)) / K.at<double>(1,1)
-//        );
-//    }
 
     std::vector<R_Frame> Relocalization::LoadImages(const std::string &strimagePath, ORBVocabulary* vocab, ORBextractor* orbextractor) {
         std::string pose = strimagePath + "pose.txt";
@@ -54,8 +44,11 @@ namespace ORB_SLAM3 {
 //            std::shared_ptr<R_Frame> currentFrame =
 //                    std::make_shared<R_Frame>(colorImgs, depthImgs, T, i+1, time, K, orbextractor, vocab);
 //            R_Frame* currentFrame = new R_Frame(colorImgs, depthImgs, T, i+1, time, K, orbextractor,vocab);
+            cout << "111222" << endl;
             vec_Bow.push_back(currentFrame);
+            cout << "22365456" << endl;
             add(&currentFrame);
+            cout << "5165" << endl;
 //            list_BowF.emplace_back(currentFrame);
 //            DBoW2::BowVector Bow_vector;
 //            vector<cv::Mat> vCurrentDesc = Converter::toDescriptorVector(currentFrame.m_des);
@@ -108,57 +101,123 @@ void Relocalization::Run() {
     while (1) {
         if (CheckNewKeyFrames()) {
             KeyFrame* CurKF;
-            cout << "Relocalization KFs = " << mlRelocalKeyFrames.size() << endl;
+//            cout << "Relocalization KFs = " << mlRelocalKeyFrames.size() << endl;
             {
                 unique_lock<mutex> lock(mMutexNewKFs);
                 CurKF = mlRelocalKeyFrames.front();
                 mlRelocalKeyFrames.pop_front();
             }
 
-            priority_queue<PDI, vector<PDI>, cmp2> que;
-            R_ORBmatcher matcher(0.9, true);
-            int k = 0;
-            for (auto f : m_Vec_BowF) {
-                double score = m_vocab->score(CurKF->mBowVec, f.m_BowVector);
-                cout << "score = " << score << " id = " << f.FrameId << endl;
+            // 将关键帧存入list中，等待后续进行位姿调整
+//            lKFs.push_back(CurKF);
+//            cout << "list11 size = " << lKFs.size() << endl;
 
-                que.push(PDI(score, k));
-                if (que.size() > 3) {
+            if (CurKF->GetMap()->GetIniertialBA2()) {
+                priority_queue<PDI, vector<PDI>, cmp> que;
+                R_ORBmatcher matcher(0.9, true);
+                int k = 0;
+                for (auto f : m_Vec_BowF) {
+                    double score = m_vocab->score(CurKF->mBowVec, f.m_BowVector);
+//                    cout << "score = " << score << " id = " << f.FrameId << endl;
+
+                    que.push(PDI(score, k));
+                    if (que.size() > 3) {
+                        que.pop();
+                    }
+                    k++;
+                }
+
+                int bestId = -1;
+                int best_matches = 0;
+                while (!que.empty()) {
+//                    cout << "que111 = " << que.top().first << " 222 = " << que.top().second << endl;
+                    int nmatches = matcher.SearchForRelocalizationByOpenCV(m_Vec_BowF[que.top().second], CurKF);
+//                cout << "nmatches = " << nmatches << endl;
+                    if (nmatches > best_matches) {
+                        best_matches = nmatches;
+                        bestId = que.top().second;
+                    }
                     que.pop();
                 }
-                k++;
+//                cout << "bestId = " << bestId << " best matches = " << best_matches << endl;
+                if (bestId == -1) continue;
+//                if (best_matches < 100) continue;   /// 阈值还需要测试
+                R_Frame Bow_F = m_Vec_BowF[bestId];
+                R_Frame::GetMapPoints(CurKF, &Bow_F);
+//                int inilers = R_Optimizer::R_PoseOptimization(&Bow_F, CurKF);
+                m_R_Tcr = Bow_F.GetTcr();
+                cout << "final m_R_Tcr = \n" << m_R_Tcr << endl;
+                // 当前关键帧在先验地图世界坐标系下的位姿
+                cv::Mat Tcw2 = m_R_Tcr * Converter::toCvMat(Bow_F.m_pose.matrix());
+//                cout << "Tcw2 = \n" << Tcw2 << endl;
+//                cv::Mat Tcw2 = m_R_Tcr;
+                cv::Mat Tw2c;
+                cv::invert(Tcw2, Tw2c);
+//                cout << "Tw2c = \n" << Tw2c << endl;
+//                cout << "1531" << endl;
+//                cout << "KF = \n" << CurKF->GetPose() << endl;
+                m_R_T21 = Tw2c * CurKF->GetPose();
+//                cout << "m_R_T21 = \n" << m_R_T21 << endl;
+                cv::invert(m_R_T21, m_R_T12);
+
+//                cout << "list22 size = " << lKFs.size() << endl;
+//                std::list<KeyFrame*> R_CurKFs;
+//                // 根据重定位的结果，更新关键帧的位姿
+//                {
+//                    unique_lock<std::mutex> lock(mMutexRKFS);
+//                    R_CurKFs.assign(lKFs.begin(), lKFs.end());
+//                    lKFs.clear();
+//                }
+
+                UpdatePose(CurKF->GetMap());
             }
-
-            int bestId = -1;
-            int best_matches = 0;
-            while (!que.empty()) {
-                cout << "que111 = " << que.top().first << " 222 = " << que.top().second << endl;
-                int nmatches = matcher.SearchForRelocalizationByOpenCV(m_Vec_BowF[que.top().second], CurKF);
-//                cout << "nmatches = " << nmatches << endl;
-                if (nmatches > best_matches) {
-                    best_matches = nmatches;
-                    bestId = que.top().second;
-                }
-                que.pop();
-            }
-            cout << "bestId = " << bestId << " best matches = " << best_matches << endl;
-            R_Frame Bow_F = m_Vec_BowF[bestId];
-            R_Frame::GetMapPoints(CurKF, &Bow_F);
-
-//            R_Optimizer::R_PoseOptimization(&Bow_F, CurKF);
-
-
-//            cv::Mat pose = Converter::toCvMat(m_Vec_BowF[k].m_pose.matrix());
-//
-//            m_CurKF->SetPose(pose);
-//            m_CurKF->ComputeBoW();
-//            std::vector<R_Frame*> RFs = DetectRelocalization(m_CurKF);
-//            cout << "RFs = " << m_CurKF->mBowVec << endl;
-//            for (auto i : RFs)
-//                cout << "ID = " << i->FrameId << endl;
-
         }
         usleep(3000);
+    }
+}
+
+void Relocalization::UpdatePose(Map* Cur_Map) {
+    cv::Mat R_R21, R_t21;
+    m_R_T21.rowRange(0,3).colRange(0,3).copyTo(R_R21);
+    m_R_T21.rowRange(0,3).col(3).copyTo(R_t21);
+
+    cout << "T21 = \n" << m_R_T21 << endl << "R21 = \n" << R_R21 << endl << "t21 = \n" << R_t21 << endl;
+
+//    for (auto lit = KF.begin(), lend = KF.end(); lit != lend; lit++) {
+//        // 更新关键帧位姿
+//        cout << "11 " << endl;
+//        KeyFrame* pKF = *lit;
+//        cv::Mat Tciw2 = pKF->GetPose() * m_R_T12;
+//        pKF->SetPose(Tciw2);
+//    }
+    // 更新关键帧位姿
+    vector<KeyFrame*> vKFs = Cur_Map->GetAllKeyFrames();
+    for (auto lit = vKFs.begin(), lend = vKFs.end(); lit != lend; lit++) {
+        KeyFrame* pKF = *lit;
+        cv::Mat Tciw2 = pKF->GetPose() * m_R_T12;
+        pKF->SetPose(Tciw2);
+    }
+
+    // 更新地图点
+    vector<MapPoint*> vMPs = Cur_Map->GetAllMapPoints();
+    for (auto sit = vMPs.begin(), send = vMPs.end(); sit != send; sit++) {
+        MapPoint* pMP = *sit;
+        pMP->SetWorldPos(R_R21 * pMP->GetWorldPos() + R_t21);
+        pMP->UpdateNormalAndDepth();
+    }
+
+    // 更新地图线
+    vector<MapLine*> vMLs = Cur_Map->GetAllMapLines();
+    for (auto vit = vMLs.begin(), vend = vMLs.end(); vit != vend; vit++) {
+        MapLine* pML = *vit;
+        if (pML->isBad() || !pML) continue;
+        Eigen::Vector3d SP = pML->GetWorldPos().head(3);
+        Eigen::Vector3d EP = pML->GetWorldPos().tail(3);
+
+        SP = Converter::toMatrix3d(R_R21) * SP + Converter::toVector3d(R_t21);
+        EP = Converter::toMatrix3d(R_R21) * EP + Converter::toVector3d(R_t21);
+        pML->SetWorldPos(SP,EP);
+        pML->UpdateNormalAndDepth();
     }
 }
 

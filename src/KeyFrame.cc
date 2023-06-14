@@ -441,16 +441,19 @@ void KeyFrame::ReplaceMapLineMatch(const size_t &idx, MapLine* pML)
 
 set<MapLine*> KeyFrame::GetMapLines()
 {
+            cout << 151 << endl;
     unique_lock<mutex> lock(mMutexFeatures);
     set<MapLine*> s;
-    for(size_t i=0, iend=N_l; i<iend; i++)
+    for(size_t i=0, iend=mvpMapLines.size(); i<iend; i++)
     {
+        cout << 1 << endl;
         if(!mvpMapLines[i])
             continue;
         MapLine* pML = mvpMapLines[i];
         if(!pML->isBad())
             s.insert(pML);
     }
+    cout << 5515 << endl;
     return s;
 }
 

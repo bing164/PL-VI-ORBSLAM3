@@ -78,7 +78,9 @@ int R_Optimizer::R_PoseOptimization(R_Frame *Bow_F, KeyFrame *Cur_F) {
 
     g2o::VertexSE3Expmap *vSE3_recov = static_cast<g2o::VertexSE3Expmap*>(optimizer.vertex(0));
     g2o::SE3Quat SE3Quat_recov = vSE3_recov->estimate();
-    std::cout << "Tcw = \n" << SE3Quat_recov << std::endl;
+    std::cout << "Tcr = \n" << SE3Quat_recov << std::endl;
+
+    Bow_F->SetTcr(Converter::toCvMat(SE3Quat_recov));
 
 
 }

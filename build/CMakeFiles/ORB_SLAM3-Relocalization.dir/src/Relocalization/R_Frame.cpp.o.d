@@ -1386,4 +1386,5 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Frame.cpp.o: \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/types/types_six_dof_expmap.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/core/robust_kernel.h \
- /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/solvers/linear_solver_dense.h
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h

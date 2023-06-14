@@ -1385,4 +1385,5 @@ CMakeFiles/mono_inertial_euroc3.dir/Examples/Monocular-Inertial/mono_inertial_eu
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/core/robust_kernel.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/../Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+ /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ImuTypes.h

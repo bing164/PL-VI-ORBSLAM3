@@ -161,6 +161,37 @@ int R_ORBmatcher::SearchForRelocalizationByOpenCV(R_Frame &F1, KeyFrame *F2) {
             good_matches.push_back(matches[i][0]);
         }
     }
+
+    cout << "gmatches = " << good_matches.size() << endl;
+    if (good_matches.size() <= 10) return good_matches.size();
+    std::vector<cv::Point2f> points1, points2;
+    for (size_t i = 0; i < good_matches.size(); i++) {
+        points1.push_back(F1.m_keypoints[good_matches[i].queryIdx].pt);
+        points2.push_back(F2->mvKeysUn[good_matches[i].trainIdx].pt);
+    }
+    cout << "points1,2 size = " << points1.size() << " " << points2.size() << endl;
+    std::vector<uchar> inliers(points1.size());
+    // Camera.fx: 458.654
+    // Camera.fy: 457.296
+    // Camera.cx: 367.215
+    // Camera.cy: 248.375
+    cv::Point2d principal_point(367.215,248.375); //相机光心
+    float focal_length = 458.0;
+    cv::Mat essential_matrix = findEssentialMat(points1, points2, focal_length, principal_point);
+
+    cv::Mat R, t;
+    cv::recoverPose(essential_matrix, points1, points2, R, t, focal_length, principal_point);
+    cout << "p2p R = \n" << R << endl;
+    cout << "p2p t = \n" << t << endl;
+
+    cv::Mat Tcr = cv::Mat::eye(4,4,CV_32F);
+
+    R.copyTo(Tcr.rowRange(0,3).colRange(0,3));
+    t.copyTo(Tcr.rowRange(0,3).col(3));
+    cout << "p2p Tcr = \n" << Tcr << endl;
+    F1.SetTcr(Tcr);
+
+
     F1.m_orbmatches = good_matches;
     return good_matches.size();
 }

@@ -1493,6 +1493,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Atlas.cc.o: /home/bing/yd/ORB3-GAI/M
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapDrawer.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/System.h
 
@@ -6850,6 +6851,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/FrameDrawer.cc.o: /home/bing/yd/ORB3
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /usr/include/opencv4/opencv2/highgui/highgui.hpp \
   /usr/include/opencv4/opencv2/imgproc/types_c.h \
   /usr/include/opencv4/opencv2/core/core_c.h \
@@ -10200,6 +10202,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Initializer.cc.o: /home/bing/yd/ORB3
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Initializer.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/LineMatcher.h \
   /usr/include/boost/algorithm/string.hpp \
@@ -16117,6 +16120,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/LocalMapping.cc.o: /home/bing/yd/ORB
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Initializer.h \
   /usr/include/boost/algorithm/string.hpp \
   /usr/include/boost/algorithm/string/std_containers_traits.hpp \
@@ -17620,6 +17624,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/LoopClosing.cc.o: /home/bing/yd/ORB3
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Initializer.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/LineMatcher.h \
   /usr/include/boost/algorithm/string.hpp \
@@ -27452,6 +27457,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Optimizer.cc.o: /home/bing/yd/ORB3-G
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Initializer.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/LineMatcher.h \
   /usr/include/boost/algorithm/string.hpp \
@@ -30333,7 +30339,8 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Frame.cpp.o: /home/
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h
 
 CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o: /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_ORBmatcher.cpp \
   /usr/include/stdc-predef.h \
@@ -31827,6 +31834,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_ORBmatcher.cpp.o: /
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/ORBmatcher.h
 
 CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o: /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Relocalization/R_Optimizer.cpp \
@@ -33207,6 +33215,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/R_Optimizer.cpp.o: /h
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/KeyFrameDatabase.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Converter.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/Relocalization/R_Optimizer.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/block_solver.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/solver.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/hyper_graph.h \
@@ -34814,7 +34823,8 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Relocalization/Relocalization.cpp.o:
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h
 
 CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Sim3Solver.cc.o: /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/src/Sim3Solver.cc \
   /usr/include/stdc-predef.h \
@@ -37475,6 +37485,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/System.cc.o: /home/bing/yd/ORB3-GAI/
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /usr/include/openssl/md5.h \
   /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
   /usr/include/openssl/opensslv.h \
@@ -39021,6 +39032,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Tracking.cc.o: /home/bing/yd/ORB3-GA
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /usr/include/opencv4/opencv2/imgproc/types_c.h \
   /usr/include/opencv4/opencv2/core/core_c.h \
   /usr/include/opencv4/opencv2/core/types_c.h \
@@ -41577,6 +41589,7 @@ CMakeFiles/ORB_SLAM3-Relocalization.dir/src/Viewer.cc.o: /home/bing/yd/ORB3-GAI/
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapDrawer.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/System.h
 

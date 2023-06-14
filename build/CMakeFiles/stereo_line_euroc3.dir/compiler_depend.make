@@ -1493,7 +1493,8 @@ CMakeFiles/stereo_line_euroc3.dir/Examples/Stereo-Line/stereo_line_euroc.cc.o: /
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel_impl.h \
   /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/core/robust_kernel.h \
-  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h \
+  /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/include/MapLine.h
 
 
 /home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h:
