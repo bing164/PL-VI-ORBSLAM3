@@ -8,3 +8,5 @@ This code has been adapted from the open-source code available at https://github
 
 2023.0609 仿照ORB-SLAM3中的词带，编写词带匹配部分，完成简单的词带检测，后续还需要改进。
 
+2023.0614 重定位代码整体已完成，后续将对真实数据进行测试。
+
