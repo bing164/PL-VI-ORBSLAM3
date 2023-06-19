@@ -10,5 +10,7 @@ This code has been adapted from the open-source code available at https://github
 
 2023.0614 重定位代码整体已完成，后续将对真实数据进行测试。
 
+2023.0617 yaml文件中新增bRelocalization项，当它设为1时，启动重定位线程，当它设置为0时，不开启重定位线程。
+
 2023.0619 整体基本实现，后续计划用深度学习的方法代替词带进行重定位。
 
