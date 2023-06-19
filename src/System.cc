@@ -213,8 +213,13 @@ System::System(const string &strVocFile_ORB, const string &strVocFile_Line, cons
     mptLoopClosing = new thread(&ORB_SLAM3::LoopClosing::Run_Lines, mpLoopCloser);
     }
 
+    int bRelocalization = fsSettings["bRelocalization"];
+//    cout << "bRelocalization = " << bRelocalization << endl;
+
     mpRelocalizer = new Relocalization(strSettingsFile);
-    mptRelocalization = new thread(&ORB_SLAM3::Relocalization::Run, mpRelocalizer);
+    if (bRelocalization == 1) {
+        mptRelocalization = new thread(&ORB_SLAM3::Relocalization::Run, mpRelocalizer);
+    }
 
     //Initialize the Viewer thread and launch
     if(bUseViewer)
@@ -233,9 +238,13 @@ System::System(const string &strVocFile_ORB, const string &strVocFile_Line, cons
 
     mpLocalMapper->SetTracker(mpTracker);
     mpLocalMapper->SetLoopCloser(mpLoopCloser);
+//    mpLocalMapper->SetRelocaler(mpRelocalizer);
 
     mpLoopCloser->SetTracker(mpTracker);
     mpLoopCloser->SetLocalMapper(mpLocalMapper);
+
+//    mpRelocalizer->SetTracker(mpTracker);
+    mpRelocalizer->SetLocalMapper(mpLocalMapper);
 
     // Fix verbosity
     Verbose::SetTh(Verbose::VERBOSITY_QUIET);
@@ -942,6 +951,22 @@ void System::SaveKeyFrameTrajectoryEuRoC(const string &filename)
             vector<float> q = Converter::toQuaternion(R);
             cv::Mat t = pKF->GetCameraCenter();
             f << setprecision(6) << pKF->mTimeStamp << " " <<  setprecision(9) << t.at<float>(0) << " " << t.at<float>(1) << " " << t.at<float>(2) << " " << q[0] << " " << q[1] << " " << q[2] << " " << q[3] << endl;
+        }
+    }
+    f.close();
+}
+
+void System::SaveKeyFrameTrajectoryByRelocalization(const string &filename) {
+    std::map<double, R_pose> vmRPose = mpRelocalizer->GetAllPose();
+    ofstream f;
+    f.open(filename.c_str());
+    f << fixed;
+    for (auto &mp : vmRPose) {
+        if (mSensor == IMU_MONOCULAR) {
+            cv::Mat R = mp.second.first;
+            std::vector<float> q = Converter::toQuaternion(R);
+            cv::Mat t = mp.second.second;
+            f << setprecision(6) << mp.first << " " <<  setprecision(9) << t.at<float>(0) << " " << t.at<float>(1) << " " << t.at<float>(2) << " " << q[0] << " " << q[1] << " " << q[2] << " " << q[3] << endl;
         }
     }
     f.close();

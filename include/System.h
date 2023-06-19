@@ -154,6 +154,7 @@ public:
 
     void SaveTrajectoryEuRoC(const string &filename);
     void SaveKeyFrameTrajectoryEuRoC(const string &filename);
+    void SaveKeyFrameTrajectoryByRelocalization(const string &filename);
 
     // Save data used for initialization debug
     void SaveDebugData(const int &iniIdx);

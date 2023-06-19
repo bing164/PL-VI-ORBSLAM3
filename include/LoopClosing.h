@@ -59,6 +59,7 @@ public:
 
     void SetLocalMapper(LocalMapping* pLocalMapper);
 
+
     // Main function
     void Run();
     void Run_Lines();

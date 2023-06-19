@@ -45,6 +45,7 @@ FrameId(i), m_time(time), orb_exetractor(orb), m_vocab(voc)
     if (m_BowVector.empty()) {
         vector<cv::Mat> vCurrentDesc = Converter::toDescriptorVector(m_des);
         m_vocab->transform(vCurrentDesc, m_BowVector, m_FeatVec, 4);
+//        cout << "size = " << m_vocab->size() << endl;
     }
 //    m_KeyFrameDatabase->mvInvertedFile_R.resize(m_vocab->size());
 //    for(DBoW2::BowVector::const_iterator vit= m_BowVector.begin(), vend=m_BowVector.end(); vit!=vend; vit++)

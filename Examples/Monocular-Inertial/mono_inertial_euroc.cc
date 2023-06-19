@@ -212,13 +212,16 @@ int main(int argc, char *argv[])
     {
         const string kf_file =  "kf_" + string(argv[argc-1]) + ".txt";
         const string f_file =  "f_" + string(argv[argc-1]) + ".txt";
+        const string rkf_file =  "rkf_" + string(argv[argc-1]) + ".txt";
         SLAM.SaveTrajectoryEuRoC(f_file);
         SLAM.SaveKeyFrameTrajectoryEuRoC(kf_file);
+        SLAM.SaveKeyFrameTrajectoryByRelocalization(rkf_file);
     }
     else
     {
         SLAM.SaveTrajectoryEuRoC("CameraTrajectory.txt");
         SLAM.SaveKeyFrameTrajectoryEuRoC("KeyFrameTrajectory.txt");
+        SLAM.SaveKeyFrameTrajectoryByRelocalization("R_KeyFrameTrajectory.txt");
     }
 
     return 0;

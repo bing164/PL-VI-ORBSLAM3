@@ -98,10 +98,10 @@ Relocalization::Relocalization(const std::string &strSettingPath) {
 //}
 
 void Relocalization::Run() {
+    bool R_flag = false;
     while (1) {
         if (CheckNewKeyFrames()) {
             KeyFrame* CurKF;
-//            cout << "Relocalization KFs = " << mlRelocalKeyFrames.size() << endl;
             {
                 unique_lock<mutex> lock(mMutexNewKFs);
                 CurKF = mlRelocalKeyFrames.front();
@@ -109,17 +109,16 @@ void Relocalization::Run() {
             }
 
             // 将关键帧存入list中，等待后续进行位姿调整
-//            lKFs.push_back(CurKF);
+            lKFs.push_back(CurKF);
 //            cout << "list11 size = " << lKFs.size() << endl;
-
-            if (CurKF->GetMap()->GetIniertialBA2()) {
+//            cout << "KF id = " << CurKF->mnId << endl;
+//            if (m_R_id == 0 && CurKF->GetMap()->GetIniertialBA2() && (CurKF->mnId - m_R_id) > 50) {
+            if (m_R_id == 0 && CurKF->GetMap()->GetIniertialBA2()) {
                 priority_queue<PDI, vector<PDI>, cmp> que;
                 R_ORBmatcher matcher(0.9, true);
                 int k = 0;
                 for (auto f : m_Vec_BowF) {
                     double score = m_vocab->score(CurKF->mBowVec, f.m_BowVector);
-//                    cout << "score = " << score << " id = " << f.FrameId << endl;
-
                     que.push(PDI(score, k));
                     if (que.size() > 3) {
                         que.pop();
@@ -130,16 +129,13 @@ void Relocalization::Run() {
                 int bestId = -1;
                 int best_matches = 0;
                 while (!que.empty()) {
-//                    cout << "que111 = " << que.top().first << " 222 = " << que.top().second << endl;
                     int nmatches = matcher.SearchForRelocalizationByOpenCV(m_Vec_BowF[que.top().second], CurKF);
-//                cout << "nmatches = " << nmatches << endl;
                     if (nmatches > best_matches) {
                         best_matches = nmatches;
                         bestId = que.top().second;
                     }
                     que.pop();
                 }
-//                cout << "bestId = " << bestId << " best matches = " << best_matches << endl;
                 if (bestId == -1) continue;
 //                if (best_matches < 100) continue;   /// 阈值还需要测试
                 R_Frame Bow_F = m_Vec_BowF[bestId];
@@ -149,15 +145,9 @@ void Relocalization::Run() {
                 cout << "final m_R_Tcr = \n" << m_R_Tcr << endl;
                 // 当前关键帧在先验地图世界坐标系下的位姿
                 cv::Mat Tcw2 = m_R_Tcr * Converter::toCvMat(Bow_F.m_pose.matrix());
-//                cout << "Tcw2 = \n" << Tcw2 << endl;
-//                cv::Mat Tcw2 = m_R_Tcr;
                 cv::Mat Tw2c;
                 cv::invert(Tcw2, Tw2c);
-//                cout << "Tw2c = \n" << Tw2c << endl;
-//                cout << "1531" << endl;
-//                cout << "KF = \n" << CurKF->GetPose() << endl;
                 m_R_T21 = Tw2c * CurKF->GetPose();
-//                cout << "m_R_T21 = \n" << m_R_T21 << endl;
                 cv::invert(m_R_T21, m_R_T12);
 
 //                cout << "list22 size = " << lKFs.size() << endl;
@@ -168,9 +158,17 @@ void Relocalization::Run() {
 //                    R_CurKFs.assign(lKFs.begin(), lKFs.end());
 //                    lKFs.clear();
 //                }
-
-                UpdatePose(CurKF->GetMap());
+//                UpdatePose(CurKF->GetMap());
+//                UpdatePose2(CurKF->GetMap());
+                m_R_id = CurKF->mnId;
+                R_flag = true;
+                lKFs.clear();
             }
+
+            if (R_flag) {
+                UpdatePose3(CurKF->GetMap());
+            }
+
         }
         usleep(3000);
     }
@@ -190,39 +188,137 @@ void Relocalization::UpdatePose(Map* Cur_Map) {
 //        cv::Mat Tciw2 = pKF->GetPose() * m_R_T12;
 //        pKF->SetPose(Tciw2);
 //    }
-    // 更新关键帧位姿
-    vector<KeyFrame*> vKFs = Cur_Map->GetAllKeyFrames();
-    for (auto lit = vKFs.begin(), lend = vKFs.end(); lit != lend; lit++) {
-        KeyFrame* pKF = *lit;
-        cv::Mat Tciw2 = pKF->GetPose() * m_R_T12;
-        pKF->SetPose(Tciw2);
+    mp_R_LocalMapper->RequestStop();
+    mp_R_LocalMapper->EmptyQueue();
+
+    while(!mp_R_LocalMapper->isStopped())
+    {
+        usleep(1000);
     }
 
-    // 更新地图点
-    vector<MapPoint*> vMPs = Cur_Map->GetAllMapPoints();
-    for (auto sit = vMPs.begin(), send = vMPs.end(); sit != send; sit++) {
-        MapPoint* pMP = *sit;
-        pMP->SetWorldPos(R_R21 * pMP->GetWorldPos() + R_t21);
-        pMP->UpdateNormalAndDepth();
+    {
+        std::unique_lock<std::mutex> lock(Cur_Map->mMutexMapUpdate);
+
+        // 更新关键帧位姿
+        vector<KeyFrame*> vKFs = Cur_Map->GetAllKeyFrames();
+        for (auto lit = vKFs.begin(), lend = vKFs.end(); lit != lend; lit++) {
+            KeyFrame* pKF = *lit;
+            cv::Mat Tciw2 = pKF->GetPose() * m_R_T12;
+            pKF->SetPose(Tciw2);
+//            pKF->UpdateConnections();
+        }
+
+        // 更新地图点
+        vector<MapPoint*> vMPs = Cur_Map->GetAllMapPoints();
+        for (auto sit = vMPs.begin(), send = vMPs.end(); sit != send; sit++) {
+            MapPoint* pMP = *sit;
+            pMP->SetWorldPos(R_R21 * pMP->GetWorldPos() + R_t21);
+            pMP->UpdateNormalAndDepth();
+        }
+
+        // 更新地图线
+        vector<MapLine*> vMLs = Cur_Map->GetAllMapLines();
+        for (auto vit = vMLs.begin(), vend = vMLs.end(); vit != vend; vit++) {
+            MapLine* pML = *vit;
+            if (pML->isBad() || !pML) continue;
+            Eigen::Vector3d SP = pML->GetWorldPos().head(3);
+            Eigen::Vector3d EP = pML->GetWorldPos().tail(3);
+
+            SP = Converter::toMatrix3d(R_R21) * SP + Converter::toVector3d(R_t21);
+            EP = Converter::toMatrix3d(R_R21) * EP + Converter::toVector3d(R_t21);
+            pML->SetWorldPos(SP,EP);
+            pML->UpdateNormalAndDepth();
+        }
     }
 
-    // 更新地图线
-    vector<MapLine*> vMLs = Cur_Map->GetAllMapLines();
-    for (auto vit = vMLs.begin(), vend = vMLs.end(); vit != vend; vit++) {
-        MapLine* pML = *vit;
-        if (pML->isBad() || !pML) continue;
-        Eigen::Vector3d SP = pML->GetWorldPos().head(3);
-        Eigen::Vector3d EP = pML->GetWorldPos().tail(3);
+    mp_R_LocalMapper->Release();
 
-        SP = Converter::toMatrix3d(R_R21) * SP + Converter::toVector3d(R_t21);
-        EP = Converter::toMatrix3d(R_R21) * EP + Converter::toVector3d(R_t21);
-        pML->SetWorldPos(SP,EP);
-        pML->UpdateNormalAndDepth();
+}
+
+void Relocalization::UpdatePose2(Map *Cur_Map) {
+    cv::Mat R_R21, R_t21;
+    m_R_T21.rowRange(0,3).colRange(0,3).copyTo(R_R21);
+    m_R_T21.rowRange(0,3).col(3).copyTo(R_t21);
+
+    cout << "T21 = \n" << m_R_T21 << endl << "R21 = \n" << R_R21 << endl << "t21 = \n" << R_t21 << endl;
+
+    mp_R_LocalMapper->RequestStop();
+    mp_R_LocalMapper->EmptyQueue();
+
+    while(!mp_R_LocalMapper->isStopped())
+    {
+        usleep(1000);
+    }
+
+    {
+        std::unique_lock<std::mutex> lock(Cur_Map->mMutexMapUpdate);
+        // 更新关键帧位姿
+        vector<KeyFrame*> vKFs = Cur_Map->GetAllKeyFrames();
+        for (auto lit = vKFs.begin(), lend = vKFs.end(); lit != lend; lit++) {
+            KeyFrame* pKFi = *lit;
+
+            // 更新地图点
+            vector<MapPoint*> vpMPsi = pKFi->GetMapPointMatches();
+            for (size_t iMP=0, endMPi = vpMPsi.size(); iMP<endMPi; iMP++) {
+                MapPoint* pMPi = vpMPsi[iMP];
+                if(!pMPi)
+                    continue;
+                if(pMPi->isBad())
+                    continue;
+                pMPi->SetWorldPos(R_R21 * pMPi->GetWorldPos() + R_t21);
+                pMPi->UpdateNormalAndDepth();
+            }
+            // 更新地图线
+            vector<MapLine*> vpMLsi = pKFi->GetMapLineMatches();
+            for(size_t iML=0, endMLi = vpMLsi.size(); iML<endMLi; iML++) {
+                MapLine* pMLi = vpMLsi[iML];
+                if(!pMLi)
+                    continue;
+                if(pMLi->isBad())
+                    continue;
+                Eigen::Vector3d SP = pMLi->GetWorldPos().head(3);
+                Eigen::Vector3d EP = pMLi->GetWorldPos().tail(3);
+
+                SP = Converter::toMatrix3d(R_R21) * SP + Converter::toVector3d(R_t21);
+                EP = Converter::toMatrix3d(R_R21) * EP + Converter::toVector3d(R_t21);
+                pMLi->SetWorldPos(SP,EP);
+                pMLi->UpdateNormalAndDepth();
+            }
+
+            cv::Mat Tciw2 = pKFi->GetPose() * m_R_T12;
+            pKFi->SetPose(Tciw2);
+            pKFi->UpdateConnections();
+        }
+
+    }
+    mp_R_LocalMapper->Release();
+
+}
+
+void Relocalization::UpdatePose3(Map *Cur_Map) {
+    cv::Mat R_R21, R_t21;
+    m_R_T21.rowRange(0,3).colRange(0,3).copyTo(R_R21);
+    m_R_T21.rowRange(0,3).col(3).copyTo(R_t21);
+
+    while (!lKFs.empty()) {
+        KeyFrame* pKFi = lKFs.front();
+        lKFs.pop_front();
+
+        cv::Mat Rciw2 = pKFi->GetImuRotation().t() * R_R21.t();
+//    vector<float> q = Converter::toQuaternion(Rciw2);
+        cv::Mat tw2b = R_R21 * pKFi->GetImuPosition() + R_t21;
+        R_pose Pair_Pose = std::pair<cv::Mat, cv::Mat>(Rciw2, tw2b);
+        mp_R_pose.insert(std::pair<double, R_pose>(pKFi->mTimeStamp, Pair_Pose));
     }
 }
 
+std::map<double, R_pose> Relocalization::GetAllPose() {
+    lock_guard<std::mutex> lock(mMutexRKFS);
+    return mp_R_pose;
+}
+
 void Relocalization::add(R_Frame* R_F) {
-        cout << "111" << endl;
+//        cout << "111" << endl;
         if (R_F->m_BowVector.empty()) {
             cout << "empty " << endl;
             return;
@@ -338,6 +434,15 @@ void Relocalization::ClearKF() {
 bool Relocalization::CheckNewKeyFrames() {
     unique_lock<mutex> lock(mMutexRelocalQueue);
     return(!mlRelocalKeyFrames.empty());
+}
+
+
+//void Relocalization::SetTracker(Tracking *pTracker) {
+//    mp_R_Tracker = pTracker;
+//}
+
+void Relocalization::SetLocalMapper(LocalMapping *pLocalMapper) {
+    mp_R_LocalMapper = pLocalMapper;
 }
 
 }

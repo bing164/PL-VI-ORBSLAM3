@@ -67,6 +67,10 @@ void LocalMapping::SetTracker(Tracking *pTracker)
     mpTracker=pTracker;
 }
 
+//void LocalMapping::SetRelocaler(Relocalization *pRelocaler) {
+//    mpRelocaler = pRelocaler;
+//}
+
 void LocalMapping::Run()
 {
 

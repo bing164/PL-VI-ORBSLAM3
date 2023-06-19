@@ -15,8 +15,12 @@
 #include "Converter.h"
 #include "R_Optimizer.h"
 #include "MapLine.h"
+//#include "LocalMapping.h"
 
 namespace ORB_SLAM3 {
+typedef std::pair<cv::Mat, cv::Mat> R_pose;
+typedef std::pair<R_pose, double> R_Pose_KF;
+
 
 class R_Frame;
 //class KeyFrame;
@@ -24,6 +28,7 @@ class Tracking;
 class KeyFrameDatabase;
 class Converter;
 class MapLine;
+class LocalMapping;
 class Relocalization {
 public:
     Relocalization(const std::string &strSettingPath );
@@ -45,6 +50,17 @@ public:
 
     void UpdatePose(Map* Cur_Map);
 
+    void UpdatePose2(Map* Cur_Map);
+
+    void UpdatePose3(Map* Cur_Map);
+
+    std::map<double, R_pose> GetAllPose();
+
+//    void SetTracker(Tracking* pTracker);
+
+    void SetLocalMapper(LocalMapping* pLocalMapper);
+
+
     vector<R_Frame*> DetectRelocalization(KeyFrame* pKF);
 
 
@@ -61,6 +77,8 @@ private:
     cv::Mat m_R_Tcr;   // 重定位中词带帧到当前关键帧的位姿变换
     cv::Mat m_R_T21;   // 当前SLAM的世界坐标系到先验地图的世界坐标系的变换
     cv::Mat m_R_T12;   // 先验地图的世界坐标系到当前SLAM的世界坐标系的变换
+
+    long unsigned int m_R_id = 0;  // 上一次发生重定位的关键帧ID
 
 protected:
     std::mutex mMutexRelocalQueue;
@@ -81,6 +99,13 @@ protected:
 //    KeyFrame* m_CurrentKeyFrame;
 
     std::list<KeyFrame*> lKFs;
+
+    std::map<double, R_pose> mp_R_pose;  // 保存最后调整后的位姿（先验地图的世界坐标系）
+
+//    Tracking* mp_R_Tracker;
+
+    LocalMapping *mp_R_LocalMapper;
+
 
 public:
     ORBextractor* orb_exetractor;

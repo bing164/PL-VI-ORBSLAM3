@@ -28,7 +28,7 @@
 #include "KeyFrameDatabase.h"
 #include "Initializer.h"
 #include "LineMatcher.h"
-#include "Relocalization.h"
+//#include "Relocalization.h"
 #include <mutex>
 
 
@@ -40,7 +40,7 @@ class Tracking;
 class LoopClosing;
 class Atlas;
 class LineMatcher;
-class Relocalization;
+//class Relocalization;
 class LocalMapping
 {
 public:
@@ -49,6 +49,8 @@ public:
     void SetLoopCloser(LoopClosing* pLoopCloser);
 
     void SetTracker(Tracking* pTracker);
+
+//    void SetRelocaler(Relocalization* pRelocaler);
 
     // Main function
     void Run();
@@ -154,7 +156,7 @@ protected:
     Atlas* mpAtlas;
 
     LoopClosing* mpLoopCloser;
-    Relocalization* mpRelocaler;
+//    Relocalization* mpRelocaler;
     Tracking* mpTracker;
 
     std::list<KeyFrame*> mlNewKeyFrames;

@@ -101,6 +101,7 @@ Viewer.ViewpointF: 500
 #---------------------------------------------------------------------------------------
 # Relocalization Parameters
 #---------------------------------------------------------------------------------------
+bRelocalization: 1   # Whether to use Relocalization threads. 1 is used, 0 is not used
 Relocalization.Path: "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/Vocabulary/ORBvoc.txt"
 Relocalization.data: "/home/bing/yd/ORB3-GAI/Monocular-Inertial-line/data2/"
 
